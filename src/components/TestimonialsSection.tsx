@@ -19,7 +19,7 @@ export default function TestimonialsSection({ onLinaClick }: TestimonialsSection
     {
       name: 'Marc Dubois',
       role: 'Directeur Data',
-      company: 'DataFlex Solutions',
+      company: 'Cablex',
       image:
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&q=80',
       quote:
