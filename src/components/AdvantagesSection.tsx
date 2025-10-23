@@ -10,7 +10,7 @@ export default function AdvantagesSection({ onLinaClick }: AdvantagesSectionProp
       icon: Globe,
       title: 'Talents trilingues experts',
       description:
-        'Profils qualifiés, maîtrisant le français et adaptés aux standards internationaux',
+        'Profils qualifiés, maîtrisant le français et l\'anglais et adaptés aux standards internationaux',
     },
     {
       icon: TrendingUp,
