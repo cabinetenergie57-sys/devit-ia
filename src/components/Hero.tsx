@@ -90,7 +90,7 @@ export default function Hero({ onLinaClick }: HeroProps) {
 
             <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-2xl p-6 border border-gray-100 max-w-xs backdrop-blur-sm bg-white/95">
               <div className="flex items-center space-x-4">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 rounded-full gradient-bg flex items-center justify-center flex-shrink-0">
                   <Sparkles className="w-7 h-7 text-white" />
                 </div>
                 <div>
