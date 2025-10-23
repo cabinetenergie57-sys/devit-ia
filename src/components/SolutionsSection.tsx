@@ -49,7 +49,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
       ],
       cta: 'Obtenez votre solution tout compris',
       image:
-        'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1260&h=840&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1260&h=840&fit=crop&q=80',
     },
   ];
 
