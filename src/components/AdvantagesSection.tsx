@@ -126,7 +126,7 @@ export default function AdvantagesSection({ onLinaClick }: AdvantagesSectionProp
 
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1260&h=840&fit=crop&q=80"
+                  src="/IMG_8628.JPG"
                   alt="Bureau moderne avec technologie et data"
                   className="rounded-2xl shadow-2xl"
                 />
