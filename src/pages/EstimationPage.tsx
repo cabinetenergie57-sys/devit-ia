@@ -333,25 +333,25 @@ export default function EstimationPage() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
+            <div className="glass-card rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
               <h3 className="text-3xl md:text-4xl font-bold mb-6">
                 Prêt à optimiser vos coûts IT ?
               </h3>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Obtenez une estimation personnalisée et découvrez comment Devit.IA peut transformer
                 votre stratégie d'externalisation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-white text-blue-600 font-semibold py-4 px-8 rounded-full hover:bg-blue-50 transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center space-x-2"
+                  className="bg-white text-gray-900 font-semibold py-4 px-8 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center space-x-2"
                 >
                   <span>Demander un devis</span>
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   to="/solutions"
-                  className="bg-transparent text-white font-semibold py-4 px-8 rounded-full border-2 border-white hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center"
+                  className="bg-white/10 text-white font-semibold py-4 px-8 rounded-full border border-white/30 hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
                 >
                   Découvrir nos solutions
                 </Link>
