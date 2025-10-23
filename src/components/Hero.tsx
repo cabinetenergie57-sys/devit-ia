@@ -81,8 +81,8 @@ export default function Hero({ onLinaClick }: HeroProps) {
           <div className="relative order-1 lg:order-2">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1260&h=840&fit=crop&q=80"
-                alt="Équipe professionnelle B2B en réunion de travail collaboratif"
+                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1260&h=840&fit=crop&q=80"
+                alt="Équipe de développeurs et data experts en collaboration"
                 className="w-full h-full object-cover aspect-[4/3]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/20 via-transparent to-transparent"></div>
