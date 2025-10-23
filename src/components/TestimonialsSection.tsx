@@ -93,49 +93,6 @@ export default function TestimonialsSection({ onLinaClick }: TestimonialsSection
           ))}
         </div>
 
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Des résultats qui parlent d'eux-mêmes
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Chaque jour, nos clients constatent l'impact de Devit.IA sur leur performance
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            {successMetrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl font-bold gradient-text mb-3">{metric.value}</div>
-                <div className="text-gray-600">{metric.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 text-center">
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">
-              Votre témoignage sera le prochain ?
-            </h4>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Rejoignez les entreprises qui ont fait confiance à Devit.IA pour transformer
-              leur stratégie Data & IT
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={onLinaClick}
-                className="btn-gradient inline-flex items-center justify-center space-x-2"
-              >
-                <span>Démarrer avec Devit.IA</span>
-              </button>
-              <button
-                onClick={onLinaClick}
-                className="bg-white text-gray-900 font-semibold py-3 px-6 rounded-full border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg"
-              >
-                Lire plus de success stories
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
