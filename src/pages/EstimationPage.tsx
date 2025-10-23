@@ -203,7 +203,7 @@ export default function EstimationPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Pourquoi choisir l'externalisation avec Devit.IA ?
+                Pourquoi choisir l'externalisation avec <span className="gradient-text">Devit.IA</span> ?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Des économies substantielles sans compromis sur la qualité
