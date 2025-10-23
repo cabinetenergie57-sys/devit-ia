@@ -31,8 +31,8 @@ export default function Hero({ onLinaClick }: HeroProps) {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
-        <div className="max-w-5xl mx-auto">
-          <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl border border-white/20 animate-fade-in-up">
+        <div className="max-w-4xl mx-auto">
+          <div className="backdrop-blur-md bg-white/10 rounded-3xl p-6 md:p-10 lg:p-12 shadow-2xl border border-white/20 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
               La nouvelle génération du{' '}
               <span className="block mt-2 bg-gradient-to-r from-[#667eea] via-[#764ba2] to-[#f093fb] bg-clip-text text-transparent">
