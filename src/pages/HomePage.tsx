@@ -79,7 +79,6 @@ export default function HomePage({ onLinaClick }: HomePageProps) {
         </div>
       </section>
 
-      <TestimonialsSection onLinaClick={onLinaClick} />
       <LinaSection onLinaClick={onLinaClick} />
 
       {/* Final CTA Section */}
@@ -107,6 +106,8 @@ export default function HomePage({ onLinaClick }: HomePageProps) {
           </div>
         </div>
       </section>
+
+      <TestimonialsSection onLinaClick={onLinaClick} />
     </>
   );
 }
