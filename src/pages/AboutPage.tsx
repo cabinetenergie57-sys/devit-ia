@@ -16,7 +16,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&q=80)',
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/85 to-pink-700/90"></div>
@@ -69,8 +69,8 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/3182834/pexels-photo-3182834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Talents Devit.IA collaborant sur un tableau de bord data"
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1260&h=840&fit=crop&q=80"
+                alt="Équipe de développeurs et data analysts en collaboration"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />
             </div>
@@ -280,8 +280,8 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.pexels.com/photos/3182781/pexels-photo-3182781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Technopark Casablanca – écosystème numérique"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1260&h=840&fit=crop&q=80"
+                alt="Environnement de travail tech moderne avec code et dashboards"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />
             </div>
@@ -324,7 +324,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
               <img
-                src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&q=80"
                 alt="Portrait de Ouafae Moussa"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
@@ -335,7 +335,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
               <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80"
                 alt="Portrait d'Ahmed MOBARAK"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />

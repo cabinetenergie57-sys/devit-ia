@@ -269,8 +269,8 @@ export default function ContactSection({ onLinaClick }: ContactSectionProps) {
 
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Bureau professionnel DevitIA Maroc"
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1260&h=840&fit=crop&q=80"
+                alt="Espace de travail moderne tech professionnel"
                 className="w-full h-64 object-cover"
               />
             </div>

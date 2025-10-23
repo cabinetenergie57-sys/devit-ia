@@ -11,7 +11,7 @@ export default function TestimonialsSection({ onLinaClick }: TestimonialsSection
       role: 'CTO',
       company: 'TechCorp France',
       image:
-        'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=2',
+        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&q=80',
       quote:
         'Devit.IA a transformé notre approche de l\'externalisation. L\'équipe marocaine s\'est intégrée en quelques jours et la qualité de livraison dépasse nos attentes. Un vrai partenariat stratégique.',
       rating: 5,
@@ -21,7 +21,7 @@ export default function TestimonialsSection({ onLinaClick }: TestimonialsSection
       role: 'Directeur Data',
       company: 'DataFlex Solutions',
       image:
-        'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=2',
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&q=80',
       quote:
         'Nous avons économisé 45% sur nos coûts Data tout en augmentant la vélocité de nos projets. L\'accompagnement de Lina et l\'équipe Devit.IA est exceptionnel.',
       rating: 5,
@@ -31,7 +31,7 @@ export default function TestimonialsSection({ onLinaClick }: TestimonialsSection
       role: 'CEO',
       company: 'InnovateLab',
       image:
-        'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&dpr=2',
+        'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&q=80',
       quote:
         'La méthode DevConnect™ est unique. Du recrutement au suivi quotidien, tout est pensé pour la réussite. Notre turn-over est proche de zéro et la satisfaction des équipes est maximale.',
       rating: 5,

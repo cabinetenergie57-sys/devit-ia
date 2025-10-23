@@ -126,8 +126,8 @@ export default function AdvantagesSection({ onLinaClick }: AdvantagesSectionProp
 
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Technopark Casablanca"
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1260&h=840&fit=crop&q=80"
+                  alt="Bureau moderne avec technologie et data"
                   className="rounded-2xl shadow-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
