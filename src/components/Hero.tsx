@@ -23,7 +23,7 @@ export default function Hero({ onLinaClick }: HeroProps) {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/75 via-slate-800/60 to-slate-900/75"></div>
       </div>
 
-      <div className="absolute top-8 right-8 z-20 gradient-bg rounded-2xl shadow-2xl p-4 border border-white/20 backdrop-blur-sm animate-fade-in">
+      <div className="absolute top-24 right-8 z-20 gradient-bg rounded-2xl shadow-2xl p-4 border border-white/20 backdrop-blur-sm animate-fade-in">
         <div className="text-white text-center">
           <div className="text-3xl font-bold">24/7</div>
           <div className="text-xs font-medium opacity-90 mt-1">Support continu</div>
