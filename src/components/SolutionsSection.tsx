@@ -14,7 +14,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
       features: [
         'Intégration en moins de 2 semaines',
         'Flexibilité totale sur la durée',
-        'Talents bilingues et expérimentés',
+        'Talents trilingues et expérimentés',
         'Suivi quotidien et rapports réguliers',
       ],
       cta: 'Construisez votre équipe sur mesure',

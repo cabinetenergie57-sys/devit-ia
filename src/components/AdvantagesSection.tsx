@@ -8,7 +8,7 @@ export default function AdvantagesSection({ onLinaClick }: AdvantagesSectionProp
   const advantages = [
     {
       icon: Globe,
-      title: 'Talents bilingues experts',
+      title: 'Talents trilingues experts',
       description:
         'Profils qualifiés, maîtrisant le français et adaptés aux standards internationaux',
     },
