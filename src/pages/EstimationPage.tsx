@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Chart, ChartConfiguration, registerables } from 'chart.js';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { TrendingUp, Users, DollarSign, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 Chart.register(...registerables);
 
@@ -49,6 +49,10 @@ export default function EstimationPage() {
   const chartInstanceRef = useRef<Chart | null>(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (!chartRef.current) return;
 
     if (chartInstanceRef.current) {
@@ -65,9 +69,9 @@ export default function EstimationPage() {
         datasets: [{
           label: 'TJM (€/jour)',
           data: marketData.map(d => d.tjm),
-          backgroundColor: '#4F46E5',
-          borderColor: '#4338CA',
-          borderWidth: 1,
+          backgroundColor: 'rgba(102, 126, 234, 0.8)',
+          borderColor: 'rgba(102, 126, 234, 1)',
+          borderWidth: 2,
           borderRadius: 8,
         }]
       },
@@ -79,7 +83,7 @@ export default function EstimationPage() {
             display: true,
             position: 'top',
             labels: {
-              color: '#e2e8f0',
+              color: '#1f2937',
               font: {
                 size: 14,
                 weight: 'bold'
@@ -87,10 +91,10 @@ export default function EstimationPage() {
             }
           },
           tooltip: {
-            backgroundColor: '#1e293b',
-            titleColor: '#e2e8f0',
-            bodyColor: '#e2e8f0',
-            borderColor: '#475569',
+            backgroundColor: '#ffffff',
+            titleColor: '#1f2937',
+            bodyColor: '#1f2937',
+            borderColor: '#e5e7eb',
             borderWidth: 1,
             padding: 12,
             displayColors: false,
@@ -105,7 +109,7 @@ export default function EstimationPage() {
           y: {
             beginAtZero: true,
             ticks: {
-              color: '#94a3b8',
+              color: '#6b7280',
               font: {
                 size: 12
               },
@@ -114,12 +118,12 @@ export default function EstimationPage() {
               }
             },
             grid: {
-              color: '#334155'
+              color: '#e5e7eb'
             }
           },
           x: {
             ticks: {
-              color: '#94a3b8',
+              color: '#6b7280',
               font: {
                 size: 12
               }
@@ -141,73 +145,221 @@ export default function EstimationPage() {
     };
   }, []);
 
+  const advantages = [
+    {
+      icon: TrendingUp,
+      title: 'Économies jusqu\'à 45%',
+      description: 'Réduisez vos coûts IT tout en maintenant un niveau de qualité premium'
+    },
+    {
+      icon: Users,
+      title: 'Talents d\'excellence',
+      description: 'Accédez aux meilleurs profils Data & IT du Maroc'
+    },
+    {
+      icon: Award,
+      title: 'Qualité garantie',
+      description: 'Processus rigoureux et accompagnement personnalisé'
+    },
+    {
+      icon: DollarSign,
+      title: 'Transparence totale',
+      description: 'Tarification claire et prévisible sans frais cachés'
+    }
+  ];
+
+  const keyStats = [
+    { value: '40-45%', label: 'Économies moyennes' },
+    { value: '98%', label: 'Satisfaction client' },
+    { value: '<5%', label: 'Turn-over' },
+    { value: '24/7', label: 'Support continu' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
-      <Header />
-
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comparatif du marché francophone — Développeur full-stack confirmé
-            </h2>
-            <p className="text-slate-300 mb-8 leading-relaxed">
-              Tarifs journaliers moyens observés pour des développeurs full-stack confirmés (3 à 5 ans d'expérience)
-              dans les pays francophones. Ces chiffres sont indicatifs et peuvent varier selon la durée, la technologie
-              et le projet. Ils servent de base de réflexion pour évaluer le coût du marché.
+    <>
+      <div className="pt-20">
+        <div className="bg-gradient-to-br from-blue-50 to-white py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Estimations et <span className="gradient-text">Tarifs du Marché</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Découvrez les tarifs du marché francophone et comprenez comment Devit.IA vous permet de réaliser des économies significatives
             </p>
-
-            <div className="overflow-x-auto mb-12">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="border-b border-slate-600">
-                    <th className="text-left py-4 px-4 text-slate-200 font-semibold">Pays</th>
-                    <th className="text-left py-4 px-4 text-slate-200 font-semibold">TJM moyen (€ / jour)</th>
-                    <th className="text-left py-4 px-4 text-slate-200 font-semibold">Équivalent mensuel (20 jours)</th>
-                    <th className="text-left py-4 px-4 text-slate-200 font-semibold">Équivalent mensuel (21 jours)</th>
-                    <th className="text-left py-4 px-4 text-slate-200 font-semibold">Remarques</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {marketData.map((row, index) => (
-                    <tr
-                      key={row.country}
-                      className={`border-b border-slate-700/50 ${
-                        index % 2 === 0 ? 'bg-slate-900/20' : 'bg-transparent'
-                      } hover:bg-slate-700/30 transition-colors`}
-                    >
-                      <td className="py-4 px-4 text-white font-medium">{row.country}</td>
-                      <td className="py-4 px-4 text-slate-300">{row.tjm} €</td>
-                      <td className="py-4 px-4 text-slate-300">{row.equivalent20}</td>
-                      <td className="py-4 px-4 text-slate-300">{row.equivalent21}</td>
-                      <td className="py-4 px-4 text-slate-400 italic">{row.remarks}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="bg-slate-900/40 border border-slate-700/50 rounded-xl p-6 mb-8">
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Visualisation comparative
-              </h3>
-              <div className="relative h-80">
-                <canvas ref={chartRef}></canvas>
-              </div>
-            </div>
-
-            <div className="bg-blue-900/20 border border-blue-700/30 rounded-xl p-6">
-              <p className="text-sm text-slate-300 leading-relaxed">
-                <strong className="text-blue-300">Note importante :</strong> Ces montants sont indicatifs et peuvent
-                varier selon le profil, la technologie, la durée et le contexte. Ils constituent une base de connaissance
-                du marché et ne représentent pas les tarifs Devit IA. Une estimation précise est fournie sur demande.
-              </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              {keyStats.map((stat, index) => (
+                <div key={index} className="bg-white rounded-xl p-4 shadow-lg">
+                  <div className="text-2xl md:text-3xl font-bold gradient-text mb-1">{stat.value}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </main>
+      </div>
 
-      <Footer />
-    </div>
+      <section className="section-padding bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Pourquoi choisir l'externalisation avec Devit.IA ?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Des économies substantielles sans compromis sur la qualité
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {advantages.map((advantage, index) => (
+                <div key={index} className="card-elegant text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg mb-4">
+                    <advantage.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{advantage.title}</h3>
+                  <p className="text-gray-600">{advantage.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 md:p-12 shadow-lg mb-16">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
+                Comparatif du marché francophone
+              </h3>
+              <p className="text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+                Tarifs journaliers moyens observés pour des développeurs full-stack confirmés (3 à 5 ans d'expérience)
+                dans les pays francophones. Ces chiffres sont indicatifs et servent de base de réflexion.
+              </p>
+
+              <div className="bg-white rounded-2xl p-6 shadow-md mb-8 overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b-2 border-gray-200">
+                      <th className="text-left py-4 px-4 text-gray-900 font-semibold">Pays</th>
+                      <th className="text-left py-4 px-4 text-gray-900 font-semibold">TJM moyen (€/jour)</th>
+                      <th className="text-left py-4 px-4 text-gray-900 font-semibold">Mensuel (20j)</th>
+                      <th className="text-left py-4 px-4 text-gray-900 font-semibold">Mensuel (21j)</th>
+                      <th className="text-left py-4 px-4 text-gray-900 font-semibold">Remarques</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {marketData.map((row, index) => (
+                      <tr
+                        key={row.country}
+                        className={`border-b border-gray-100 ${
+                          index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
+                        } hover:bg-blue-50 transition-colors`}
+                      >
+                        <td className="py-4 px-4 text-gray-900 font-medium">{row.country}</td>
+                        <td className="py-4 px-4 text-gray-700 font-semibold">{row.tjm} €</td>
+                        <td className="py-4 px-4 text-gray-700">{row.equivalent20}</td>
+                        <td className="py-4 px-4 text-gray-700">{row.equivalent21}</td>
+                        <td className="py-4 px-4 text-gray-500 italic">{row.remarks}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 shadow-md">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+                  Visualisation comparative des tarifs
+                </h4>
+                <div className="relative h-80">
+                  <canvas ref={chartRef}></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl text-white mb-16">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                    L'avantage Devit.IA
+                  </h3>
+                  <p className="text-lg text-gray-300 mb-6">
+                    Avec notre modèle d'externalisation au Maroc, bénéficiez de tarifs compétitifs tout en maintenant
+                    une qualité de service exceptionnelle.
+                  </p>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />
+                      <span>Réduction des coûts de 40 à 45% par rapport aux tarifs locaux</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />
+                      <span>Même fuseau horaire et culture francophone</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />
+                      <span>Équipes dédiées et intégration fluide</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />
+                      <span>Support et accompagnement continu</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <div className="text-center mb-6">
+                    <div className="text-sm text-gray-300 mb-2">Exemple de calcul mensuel</div>
+                    <div className="text-4xl md:text-5xl font-bold mb-2">€5,500</div>
+                    <div className="text-sm text-gray-400">au lieu de €10,000/mois</div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between py-3 border-t border-white/20">
+                      <span className="text-gray-300">Profil</span>
+                      <span className="font-semibold">Dev Full-stack Confirmé</span>
+                    </div>
+                    <div className="flex justify-between py-3 border-t border-white/20">
+                      <span className="text-gray-300">Durée</span>
+                      <span className="font-semibold">12 mois</span>
+                    </div>
+                    <div className="flex justify-between py-3 border-t border-white/20">
+                      <span className="text-gray-300">Économies annuelles</span>
+                      <span className="font-semibold text-green-400">€54,000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-6 mb-16">
+              <p className="text-gray-700 leading-relaxed">
+                <strong className="text-blue-900">Note importante :</strong> Ces montants sont indicatifs et peuvent
+                varier selon le profil, la technologie, la durée et le contexte du projet. Ils constituent une base de connaissance
+                du marché et ne représentent pas les tarifs définitifs de Devit.IA. Une estimation précise et personnalisée
+                est fournie sur demande après analyse de vos besoins.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                Prêt à optimiser vos coûts IT ?
+              </h3>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Obtenez une estimation personnalisée et découvrez comment Devit.IA peut transformer
+                votre stratégie d'externalisation
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-white text-blue-600 font-semibold py-4 px-8 rounded-full hover:bg-blue-50 transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center space-x-2"
+                >
+                  <span>Demander un devis</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  to="/solutions"
+                  className="bg-transparent text-white font-semibold py-4 px-8 rounded-full border-2 border-white hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center"
+                >
+                  Découvrir nos solutions
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
