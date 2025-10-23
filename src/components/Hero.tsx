@@ -31,16 +31,16 @@ export default function Hero({ onLinaClick }: HeroProps) {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
-        <div className="max-w-4xl mx-auto">
-          <div className="backdrop-blur-md bg-white/10 rounded-3xl p-6 md:p-10 lg:p-12 shadow-2xl border border-white/20 animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="backdrop-blur-md bg-white/10 rounded-3xl p-6 md:p-8 lg:p-10 shadow-2xl border border-white/20 animate-fade-in-up">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-5">
               La nouvelle génération du{' '}
               <span className="block mt-2 bg-gradient-to-r from-[#667eea] via-[#764ba2] to-[#f093fb] bg-clip-text text-transparent">
                 nearshore francophone
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed mb-10 max-w-3xl">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed mb-8 max-w-2xl">
               Devit.IA associe expertise humaine et intelligence artificielle pour offrir aux entreprises francophones un modèle d'externalisation plus fluide, plus rapide et plus intelligent.
             </p>
 
@@ -62,18 +62,18 @@ export default function Hero({ onLinaClick }: HeroProps) {
               </button>
             </div>
 
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/20">
+            <div className="grid grid-cols-3 gap-6 mt-8 pt-6 border-t border-white/20">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">98%</div>
-                <div className="text-sm text-white/80 font-medium">Satisfaction client</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">98%</div>
+                <div className="text-xs md:text-sm text-white/80 font-medium">Satisfaction client</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">40%</div>
-                <div className="text-sm text-white/80 font-medium">Plus rapide</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">40%</div>
+                <div className="text-xs md:text-sm text-white/80 font-medium">Plus rapide</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">&lt;5%</div>
-                <div className="text-sm text-white/80 font-medium">Turn-over</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">&lt;5%</div>
+                <div className="text-xs md:text-sm text-white/80 font-medium">Turn-over</div>
               </div>
             </div>
           </div>
