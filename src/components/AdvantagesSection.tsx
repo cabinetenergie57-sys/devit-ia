@@ -134,13 +134,19 @@ export default function AdvantagesSection({ onLinaClick }: AdvantagesSectionProp
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-gray-700">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold gradient-text mb-2">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-700">
+              <div className="text-center md:text-left">
+                <div className="text-3xl font-bold text-white mb-2">🌍 Proximité</div>
+                <p className="text-gray-300">Fuseau horaire GMT+1, à 2h30 de vol de Paris</p>
+              </div>
+              <div className="text-center md:text-left">
+                <div className="text-3xl font-bold text-white mb-2">🎓 Excellence</div>
+                <p className="text-gray-300">Formation tech de niveau mondial, écoles d'ingénieurs reconnues</p>
+              </div>
+              <div className="text-center md:text-left">
+                <div className="text-3xl font-bold text-white mb-2">💡 Innovation</div>
+                <p className="text-gray-300">Écosystème startup dynamique, technoparks et incubateurs</p>
+              </div>
             </div>
           </div>
         </div>
