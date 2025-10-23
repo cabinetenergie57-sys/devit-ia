@@ -9,7 +9,7 @@ export default function TestimonialsSection({ onLinaClick }: TestimonialsSection
     {
       name: 'Sophie Martin',
       role: 'CTO',
-      company: 'TechCorp France',
+      company: 'NFTECH',
       image:
         'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&q=80',
       quote:
