@@ -126,25 +126,31 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Technologies de confiance
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
                 Nous travaillons avec les leaders mondiaux de la sécurité et de la conformité
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {toolLogos.map((tool, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center group"
-                >
-                  <div className="w-16 h-16 rounded-lg bg-gray-50 flex items-center justify-center mb-3 group-hover:bg-gradient-to-br group-hover:from-blue-50 group-hover:to-purple-50 transition-all duration-300">
-                    <tool.icon className={`w-8 h-8 ${tool.color} group-hover:scale-110 transition-transform duration-300`} />
+            <div
+              className="relative overflow-hidden py-6"
+              role="region"
+              aria-label="Logos des outils et standards de sécurité utilisés par Devit IA"
+            >
+              <div className="flex animate-scroll">
+                {[...toolLogos, ...toolLogos].map((tool, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 mx-8 group"
+                  >
+                    <div className="w-20 h-20 rounded-lg bg-white border border-gray-100 flex items-center justify-center transition-all duration-300 hover:border-gray-200 hover:shadow-lg hover:scale-105">
+                      <tool.icon
+                        className={`w-10 h-10 ${tool.color} transition-transform duration-300`}
+                        aria-label={tool.name}
+                      />
+                    </div>
                   </div>
-                  <span className="text-sm font-semibold text-gray-700 text-center">
-                    {tool.name}
-                  </span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
