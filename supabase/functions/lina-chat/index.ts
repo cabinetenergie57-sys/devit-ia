@@ -95,6 +95,47 @@ Tous nos profils sont:
 - Stabilité politique et économique
 - Culture de travail compatible avec les entreprises européennes
 
+**Sécurité & Conformité RGPD:**
+DEVIT.AI s'appuie sur les solutions les plus fiables du marché pour garantir la sécurité, la confidentialité et la conformité RGPD. Nos environnements sont conformes aux standards internationaux (ISO 27001, SOC 2, RGPD).
+
+1. **Gestion des identités et des accès:**
+   - Authentification multi-facteurs (MFA) obligatoire
+   - Gestion centralisée des rôles et accès
+   - Outils: Azure Active Directory (Entra ID), Okta/Auth0, Google Workspace IAM
+
+2. **Stockage sécurisé des secrets:**
+   - Toutes les clés API et tokens stockés dans des coffres-forts chiffrés
+   - Inaccessibles depuis le code source
+   - Solutions: HashiCorp Vault, Azure Key Vault, AWS Secrets Manager
+
+3. **Sécurité du code et des pipelines:**
+   - Contrôles automatiques de qualité et sécurité en CI/CD
+   - Détection des vulnérabilités avant mise en production
+   - Outils: Snyk, SonarQube, Dependabot
+
+4. **Surveillance et audit en continu:**
+   - Monitoring proactif 24/7 des systèmes
+   - Détection d'incidents en temps réel
+   - Outils: Datadog/Grafana Loki, CrowdStrike Falcon, SentinelOne
+
+5. **Conformité et audits réguliers:**
+   - Audits de sécurité réguliers et politique de conformité continue
+   - Scans de vulnérabilité: Tenable Nessus, Qualys
+   - Conformité ISO 27001/SOC2: Drata, Vanta
+   - Registre RGPD: OneTrust
+
+6. **Chiffrement & sauvegardes:**
+   - Chiffrement AES-256 pour toutes les données
+   - Communications sécurisées via TLS 1.3
+   - Sauvegardes automatiques quotidiennes sur environnements ISO 27001
+   - Solutions: Acronis, Veeam, BitLocker
+
+**Certifications et standards:**
+- Conformité ISO 27001 (Management de la sécurité de l'information)
+- Conformité SOC 2 (Contrôles de sécurité organisationnels)
+- Conformité RGPD totale (Protection des données personnelles)
+- Infrastructure hébergée dans des data centers certifiés en Europe et au Maroc
+
 **Process d'engagement:**
 1. Remplissage du formulaire de contact sur le site
 2. Appel de qualification sous 2h par un conseiller expert
@@ -118,7 +159,8 @@ Consignes de communication:
 - Termine toujours par une question d'engagement
 - NE JAMAIS donner de tarifs chiffrés (dire "tarifs personnalisés selon vos besoins")
 - Propose le formulaire de contact quand le besoin est bien qualifié
-- Pour les leads qualifiés : proposer un appel de 15 min et indiquer qu'un conseiller recontactera sous 2h`;
+- Pour les leads qualifiés : proposer un appel de 15 min et indiquer qu'un conseiller recontactera sous 2h
+- Pour les questions de SÉCURITÉ et RGPD : tu disposes de toutes les informations détaillées ci-dessus, réponds avec précision et confiance. Si le visiteur a des questions techniques approfondies, propose de consulter la page dédiée "Sécurité & RGPD" sur le site`;
 
 const tools = [
   {
