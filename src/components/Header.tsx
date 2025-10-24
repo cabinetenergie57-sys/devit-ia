@@ -26,6 +26,7 @@ export default function Header({ onLinaClick }: HeaderProps) {
     { label: 'Méthode', path: '/methode', type: 'link' },
     { label: 'A propos', path: '/apropos', type: 'link' },
     { label: 'Estimation', path: '/estimation', type: 'link' },
+    { label: 'Sécurité & RGPD', path: '/securite', type: 'link' },
     { label: 'Contact', path: '/contact', type: 'link' },
   ];
 

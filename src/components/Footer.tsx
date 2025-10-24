@@ -1,4 +1,5 @@
 import { Linkedin, Mail, Phone, MapPin, Bot } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface FooterProps {
   onLinaClick: () => void;
@@ -151,9 +152,9 @@ export default function Footer({ onLinaClick }: FooterProps) {
               <a href="#" className="hover:text-white transition-colors">
                 Politique de confidentialité
               </a>
-              <a href="#" className="hover:text-white transition-colors">
-                RGPD
-              </a>
+              <Link to="/securite" className="hover:text-white transition-colors">
+                Sécurité & RGPD
+              </Link>
             </div>
           </div>
         </div>
