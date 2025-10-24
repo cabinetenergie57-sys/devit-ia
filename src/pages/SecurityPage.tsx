@@ -1,4 +1,5 @@
-import { Shield, Lock, Code, Eye, FileCheck, HardDrive, CheckCircle2, Cloud, Key, Server, Bot, MessageCircle } from 'lucide-react';
+import { Shield, Lock, Code, Eye, FileCheck, HardDrive, CheckCircle2, Bot, MessageCircle } from 'lucide-react';
+import SecurityLogosMarquee from '../components/SecurityLogosMarquee';
 
 interface SecurityPageProps {
   onLinaClick: () => void;
@@ -50,20 +51,6 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
     }
   ];
 
-  const toolLogos = [
-    { name: 'Azure', icon: Cloud, color: 'text-blue-600' },
-    { name: 'Okta', icon: Shield, color: 'text-blue-700' },
-    { name: 'Vault', icon: Lock, color: 'text-purple-600' },
-    { name: 'SonarQube', icon: Code, color: 'text-green-600' },
-    { name: 'Snyk', icon: Shield, color: 'text-purple-700' },
-    { name: 'Datadog', icon: Eye, color: 'text-indigo-600' },
-    { name: 'Drata', icon: FileCheck, color: 'text-pink-600' },
-    { name: 'OneTrust', icon: Server, color: 'text-blue-800' },
-    { name: 'Veeam', icon: HardDrive, color: 'text-green-700' },
-    { name: 'Qualys', icon: Shield, color: 'text-orange-600' },
-    { name: 'Nessus', icon: Eye, color: 'text-red-600' },
-    { name: 'BitLocker', icon: Key, color: 'text-gray-700' }
-  ];
 
   return (
     <>
@@ -119,42 +106,7 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center md:text-left mb-8">
-              <h3 id="security-tools-title" className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                Ils sécurisent nos livraisons
-              </h3>
-              <p className="text-base text-gray-600" role="doc-subtitle">
-                Solutions et standards reconnus pour la sécurité, la conformité et l'observabilité de bout en bout.
-              </p>
-            </div>
-
-            <div
-              className="relative overflow-hidden py-6"
-              role="region"
-              aria-labelledby="security-tools-title"
-            >
-              <div className="flex animate-scroll">
-                {[...toolLogos, ...toolLogos].map((tool, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 mx-8 group"
-                  >
-                    <div className="w-20 h-20 rounded-lg bg-white border border-gray-100 flex items-center justify-center transition-all duration-300 hover:border-gray-200 hover:shadow-lg hover:scale-105">
-                      <tool.icon
-                        className={`w-10 h-10 ${tool.color} transition-transform duration-300`}
-                        aria-label={tool.name}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SecurityLogosMarquee />
 
       <section className="section-padding bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
