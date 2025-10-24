@@ -14,12 +14,12 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
       features: [
         'Intégration en moins de 2 semaines',
         'Flexibilité totale sur la durée',
-        'Talents bilingues et expérimentés',
+        'Talents trilingues et expérimentés',
         'Suivi quotidien et rapports réguliers',
       ],
       cta: 'Construisez votre équipe sur mesure',
       image:
-        'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1260&h=840&fit=crop&q=80',
     },
     {
       icon: UserCheck,
@@ -34,7 +34,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
       ],
       cta: 'Demandez un expert',
       image:
-        'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1260&h=840&fit=crop&q=80',
     },
     {
       icon: Briefcase,
@@ -49,7 +49,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
       ],
       cta: 'Obtenez votre solution tout compris',
       image:
-        'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1260&h=840&fit=crop&q=80',
     },
   ];
 

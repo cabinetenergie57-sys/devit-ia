@@ -141,8 +141,8 @@ export default function MethodSection({ onLinaClick }: MethodSectionProps) {
 
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Success story Devit.IA"
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1260&h=840&fit=crop&q=80"
+                alt="Équipe tech travaillant sur projet avec dashboards"
                 className="rounded-2xl shadow-2xl w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
