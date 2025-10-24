@@ -122,19 +122,19 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Technologies de confiance
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                Nous travaillons avec les leaders mondiaux de la sécurité et de la conformité
+            <div className="text-center md:text-left mb-8">
+              <h3 id="security-tools-title" className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                Ils sécurisent nos livraisons
+              </h3>
+              <p className="text-base text-gray-600" role="doc-subtitle">
+                Solutions et standards reconnus pour la sécurité, la conformité et l'observabilité de bout en bout.
               </p>
             </div>
 
             <div
               className="relative overflow-hidden py-6"
               role="region"
-              aria-label="Logos des outils et standards de sécurité utilisés par Devit IA"
+              aria-labelledby="security-tools-title"
             >
               <div className="flex animate-scroll">
                 {[...toolLogos, ...toolLogos].map((tool, index) => (
