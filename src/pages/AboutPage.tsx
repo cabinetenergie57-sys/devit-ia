@@ -248,27 +248,27 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
       </section>
 
       {/* Stats Section */}
-      <section className="py-8 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+      <section className="py-6 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
             Chiffres clés
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-2">≤ 10</div>
-              <div className="text-xl text-blue-100">jours de démarrage moyen</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">≤ 10</div>
+              <div className="text-base md:text-lg text-blue-100">jours de démarrage moyen</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-2">98 %</div>
-              <div className="text-xl text-blue-100">Satisfaction client</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">98 %</div>
+              <div className="text-base md:text-lg text-blue-100">Satisfaction client</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-2">50 %</div>
-              <div className="text-xl text-blue-100">Économies sur les coûts IT</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">50 %</div>
+              <div className="text-base md:text-lg text-blue-100">Économies sur les coûts IT</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-2">&lt; 5 %</div>
-              <div className="text-xl text-blue-100">Turn-over des missions</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">&lt; 5 %</div>
+              <div className="text-base md:text-lg text-blue-100">Turn-over des missions</div>
             </div>
           </div>
         </div>
