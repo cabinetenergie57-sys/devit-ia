@@ -1,4 +1,5 @@
 import { Users, Zap, TrendingUp, Shield, ArrowRight, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface MethodSectionProps {
   onLinaClick: () => void;
@@ -76,18 +77,13 @@ export default function MethodSection({ onLinaClick }: MethodSectionProps) {
             Vous gagnez en flexibilité, en performance et en sérénité grâce à une approche mesurable,
             humaine et rentable.
           </p>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              const contactSection = document.getElementById('contact');
-              contactSection?.scrollIntoView({ behavior: 'smooth' });
-            }}
+          <Link
+            to="/contact"
             className="btn-gradient inline-flex items-center justify-center space-x-2"
           >
             <span>Demandez un audit gratuit</span>
             <ArrowRight size={20} />
-          </a>
+          </Link>
         </div>
 
         <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 md:p-12 mt-8">
