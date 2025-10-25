@@ -12,7 +12,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative text-white py-12 md:py-16 overflow-hidden">
+      <section className="relative text-white pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -22,10 +22,10 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/85 to-pink-700/90"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
               A propos de Devit.IA
             </h1>
-            <p className="text-lg md:text-xl mb-6 text-blue-50 leading-relaxed">
+            <p className="text-lg md:text-xl mb-8 text-blue-50 leading-relaxed drop-shadow-md max-w-3xl mx-auto">
               Réinventer l'externalisation IT & Data pour les PME francophones grâce à la méthode DevConnect™.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
