@@ -162,13 +162,13 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
         </div>
       </section>
 
-      <section className="py-12 gradient-bg">
+      <section className="py-12 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="glass-card-gradient rounded-3xl p-6 md:p-8 text-center text-white">
+            <div className="rounded-3xl p-6 md:p-8 text-center text-white">
               <Shield className="w-12 h-12 mx-auto mb-4 drop-shadow-md" />
               <h3 className="text-2xl md:text-3xl font-bold mb-3 drop-shadow-md">
-                Votre sécurité, notre priorité
+                Sécurité & RGPD
               </h3>
               <p className="text-base md:text-lg text-white mb-6 max-w-2xl mx-auto drop-shadow-sm">
                 Découvrez comment nos standards de sécurité peuvent protéger vos projets IT,
