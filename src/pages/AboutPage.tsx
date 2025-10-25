@@ -280,7 +280,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1260&h=840&fit=crop&q=80"
+                src="/IMG_8623.JPG"
                 alt="Environnement de travail tech moderne avec code et dashboards"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />
