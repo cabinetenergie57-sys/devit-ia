@@ -292,7 +292,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
               <ul className="space-y-4 text-lg text-gray-700">
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 rounded-full bg-blue-600 mt-2 mr-3"></span>
-                  <span><strong>100 % francophone</strong> : communication fluide et culture business partagée.</span>
+                  <span><strong>100 % francophone et anglophone</strong> : communication fluide et culture business partagée.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 rounded-full bg-blue-600 mt-2 mr-3"></span>
