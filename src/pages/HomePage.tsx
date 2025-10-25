@@ -1,6 +1,7 @@
 import Hero from '../components/Hero';
 import TestimonialsSection from '../components/TestimonialsSection';
 import LinaSection from '../components/LinaSection';
+import BlogSection from '../components/BlogSection';
 import { Database, Shield, TrendingUp, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -105,6 +106,8 @@ export default function HomePage({ onLinaClick }: HomePageProps) {
       </section>
 
       <TestimonialsSection onLinaClick={onLinaClick} />
+
+      <BlogSection onLinaClick={onLinaClick} />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import AdvantagesSection from '../components/AdvantagesSection';
-import BlogSection from '../components/BlogSection';
 
 interface AdvantagesPageProps {
   onLinaClick: () => void;
@@ -26,7 +25,6 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
         </div>
       </div>
       <AdvantagesSection onLinaClick={onLinaClick} />
-      <BlogSection onLinaClick={onLinaClick} />
     </>
   );
 }
