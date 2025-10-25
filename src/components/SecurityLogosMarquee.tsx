@@ -17,14 +17,14 @@ export default function SecurityLogosMarquee() {
   const duplicatedTools = [...securityTools, ...securityTools];
 
   return (
-    <section className="section-padding relative overflow-hidden" style={{
+    <section className="py-12 relative overflow-hidden" style={{
       background: 'linear-gradient(135deg, #0a0f1f 0%, #141b36 50%, #1b1440 100%)',
-      boxShadow: 'inset 0 30px 60px rgba(0,0,0,0.3)',
+      boxShadow: 'inset 0 20px 40px rgba(0,0,0,0.3)',
       borderTop: '1px solid rgba(168, 85, 247, 0.25)'
     }}>
       {/* Violet Glow Effect */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-3/4 h-48 bg-purple-600/20 blur-3xl rounded-full"></div>
+        <div className="w-3/4 h-32 bg-purple-600/20 blur-3xl rounded-full"></div>
       </div>
 
       {/* Floating Particles */}
@@ -37,7 +37,7 @@ export default function SecurityLogosMarquee() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-white">
           Ils sécurisent nos livraisons
         </h2>
 
@@ -49,10 +49,10 @@ export default function SecurityLogosMarquee() {
                 className="flex-shrink-0 transition-all duration-300 hover:shadow-[0_0_10px_rgba(168,85,247,0.4)] group"
               >
                 <div className="flex flex-col items-center space-y-2">
-                  <div className="text-5xl opacity-90 filter grayscale group-hover:grayscale-0 transition-all">
+                  <div className="text-4xl opacity-90 filter grayscale group-hover:grayscale-0 transition-all">
                     {tool.icon}
                   </div>
-                  <span className="text-sm font-light text-[#C8CBD4] whitespace-nowrap">
+                  <span className="text-xs font-light text-[#C8CBD4] whitespace-nowrap">
                     {tool.name}
                   </span>
                 </div>
@@ -63,7 +63,7 @@ export default function SecurityLogosMarquee() {
       </div>
 
       {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-[#1b1440] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-b from-transparent to-[#1b1440] pointer-events-none"></div>
 
       <style>{`
         @keyframes scroll {
