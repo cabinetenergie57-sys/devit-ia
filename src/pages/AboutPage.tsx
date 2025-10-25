@@ -224,7 +224,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
                   Une approche centrée sur la valeur
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  DevConnect™ apporte une logique de partenariat : nous ne plaçons pas un développeur, nous intégrons une ressource stratégique dans votre équipe. Cela signifie un démarrage plus rapide, des économies significatives, et surtout une stabilité durable dans la gestion de vos projets IT et Data.
+                  DevConnect™ apporte une logique de partenariat : nous ne plaçons pas un développeur, nous intégrons <strong>une ressource stratégique dans votre équipe</strong>. Cela signifie un démarrage plus rapide, des <strong>économies significatives</strong>, et surtout une stabilité durable dans la gestion de vos projets IT et Data.
                 </p>
               </div>
 
