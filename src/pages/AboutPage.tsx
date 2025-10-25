@@ -12,7 +12,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative text-white pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
+      <section className="relative text-white pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
