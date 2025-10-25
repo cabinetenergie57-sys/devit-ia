@@ -248,7 +248,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
       </section>
 
       {/* Stats Section */}
-      <section className="py-8 bg-gradient-to-r from-blue-600 to-pink-600 text-white">
+      <section className="py-8 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Chiffres clés
