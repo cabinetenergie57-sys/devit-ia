@@ -94,21 +94,13 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
                   ))}
                 </ul>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button
-                    onClick={onLinaClick}
-                    className="btn-gradient inline-flex items-center justify-center space-x-2"
-                  >
-                    <span>{solution.cta}</span>
-                    <ArrowRight size={20} />
-                  </button>
-                  <button
-                    onClick={onLinaClick}
-                    className="bg-white text-gray-900 font-semibold py-3 px-6 rounded-full border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg"
-                  >
-                    En savoir plus
-                  </button>
-                </div>
+                <button
+                  onClick={onLinaClick}
+                  className="btn-gradient inline-flex items-center justify-center space-x-2"
+                >
+                  <span>{solution.cta}</span>
+                  <ArrowRight size={20} />
+                </button>
               </div>
 
               <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>

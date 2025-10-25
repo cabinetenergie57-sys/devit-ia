@@ -63,10 +63,7 @@ export default function HomePage({ onLinaClick }: HomePageProps) {
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 mb-4">{benefit.description}</p>
-                <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
-                  En savoir plus <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
+                <p className="text-gray-600">{benefit.description}</p>
               </Link>
             ))}
           </div>
