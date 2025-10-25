@@ -215,7 +215,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
                   Ce qui nous différencie de la concurrence
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Là où les autres prestataires se contentent de présenter des profils, Devit.IA s'engage sur un résultat. Notre méthode DevConnect™ intègre des étapes précises : sélection approfondie, onboarding complet, suivi de performance mensuel, et optimisation continue. Chaque mission est pilotée, mesurée et accompagnée — pas simplement mise en relation.
+                  Là où les autres prestataires se contentent de présenter des profils, Devit.IA s'engage sur un résultat. Notre méthode DevConnect™ intègre des étapes précises : sélection approfondie, onboarding complet, suivi de performance mensuel, et optimisation continue. Chaque mission est pilotée, mesurée et accompagnée, <strong>pas simplement une mise en relation</strong>.
                 </p>
               </div>
 
