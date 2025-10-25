@@ -206,7 +206,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
                   Pourquoi la rendre exclusive ?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Parce que DevConnect™ n'est pas un service de sourcing classique. C'est un véritable processus de collaboration intelligent, développé en interne par Devit.IA, qui combine IA, sélection humaine et accompagnement métier. En la gardant exclusive, nous protégeons notre savoir-faire et assurons à nos clients une qualité de service impossible à reproduire ailleurs.
+                  Parce que DevConnect™ n'est pas un service de sourcing classique. C'est un véritable processus de collaboration intelligent, développé en interne par Devit.IA, qui combine IA, <strong>sélection humaine et accompagnement métier</strong>. En la gardant exclusive, nous protégeons notre savoir-faire et assurons à nos clients une qualité de service impossible à reproduire ailleurs.
                 </p>
               </div>
 
