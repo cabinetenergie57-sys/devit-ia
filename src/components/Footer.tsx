@@ -6,12 +6,6 @@ interface FooterProps {
 }
 
 export default function Footer({ onLinaClick }: FooterProps) {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -25,7 +19,7 @@ export default function Footer({ onLinaClick }: FooterProps) {
             </p>
             <div className="flex items-center space-x-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/devitia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors"
@@ -39,56 +33,83 @@ export default function Footer({ onLinaClick }: FooterProps) {
             <h3 className="font-bold text-lg mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
-                <button
-                  onClick={() => scrollToSection('hero')}
+                <Link
+                  to="/"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Accueil
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('method')}
+                <Link
+                  to="/methode"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Méthode Devit.IA
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('solutions')}
+                <Link
+                  to="/solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Solutions
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('advantages')}
+                <Link
+                  to="/avantages"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Avantages Maroc
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('testimonials')}
+                <a
+                  href="/#testimonials"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Témoignages
-                </button>
+                </a>
               </li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold text-lg mb-4">Solutions</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>Régie nouvelle génération</li>
-              <li>Expert à la carte</li>
-              <li>Clé en main Devit.IA</li>
-              <li>Consulting Data & IT</li>
-              <li>Audit & Accompagnement</li>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="/solutions#regie"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Régie nouvelle génération
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/solutions#expert"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Expert à la carte
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/solutions#cle"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Clé en main Devit.IA
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/solutions#lamethode"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Audit & Accompagnement
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -152,7 +173,7 @@ export default function Footer({ onLinaClick }: FooterProps) {
               <a href="#" className="hover:text-white transition-colors">
                 Politique de confidentialité
               </a>
-              <Link to="/securite" className="hover:text-white transition-colors">
+<Link to="/securite" className="hover:text-white transition-colors">
                 Sécurité & RGPD
               </Link>
             </div>
