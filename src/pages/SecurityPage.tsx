@@ -162,22 +162,22 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
         </div>
       </section>
 
-      <section className="section-padding gradient-bg">
+      <section className="py-12 gradient-bg">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="glass-card-gradient rounded-3xl p-8 md:p-12 text-center text-white">
-              <Shield className="w-16 h-16 mx-auto mb-6 drop-shadow-md" />
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 drop-shadow-md">
+            <div className="glass-card-gradient rounded-3xl p-6 md:p-8 text-center text-white">
+              <Shield className="w-12 h-12 mx-auto mb-4 drop-shadow-md" />
+              <h3 className="text-2xl md:text-3xl font-bold mb-3 drop-shadow-md">
                 Votre sécurité, notre priorité
               </h3>
-              <p className="text-xl text-white mb-8 max-w-2xl mx-auto drop-shadow-sm">
+              <p className="text-base md:text-lg text-white mb-6 max-w-2xl mx-auto drop-shadow-sm">
                 Découvrez comment nos standards de sécurité peuvent protéger vos projets IT,
                 Data et IA tout en garantissant une conformité RGPD totale.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={onLinaClick}
-                  className="bg-white text-gray-900 font-semibold py-4 px-8 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-xl hover:scale-105 inline-flex items-center justify-center space-x-2"
+                  className="bg-white text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-xl hover:scale-105 inline-flex items-center justify-center space-x-2"
                 >
                   <span>Parlez à Lina</span>
                 </button>
