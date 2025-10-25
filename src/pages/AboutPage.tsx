@@ -69,7 +69,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
             </div>
             <div>
               <img
-                src="/IMG_8623.JPG"
+                src="/IMG_8627.JPG"
                 alt="Équipe de développeurs et data analysts en collaboration"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />
