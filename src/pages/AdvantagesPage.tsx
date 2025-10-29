@@ -35,7 +35,7 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
     {
       icon: MessageSquare,
       title: 'Communication',
-      text: 'Slack ou Microsoft Teams pour des échanges clairs et rapides entre votre équipe, le manager Devit.IA et le développeur. Notion centralise les informations clés.',
+      text: 'Accompagnement humain et technique au quotidien. Nous croyons qu\'une externalisation réussie repose sur trois piliers : la compétence, la communication et le pilotage. C\'est pourquoi chaque mission Devit.IA bénéficie d\'un mini-management intégré, assuré par l\'un de nos managers expérimentés. Il accompagne à la fois le développeur et le client, facilitant la collaboration et garantissant la qualité du livrable.',
       image: 'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
