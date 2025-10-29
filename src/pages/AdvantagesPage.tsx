@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, MessageSquare, Kanban, GitBranch, ShieldCheck, BarChart3, Cpu, UserSquare2, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AdvantagesSection from '../components/AdvantagesSection';
 
@@ -28,6 +28,49 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
     {
       subtitle: '4. Suivi et mini-management',
       text: 'Nos managers assurent un suivi continu pendant la mission, en réalisant des points réguliers avec le client et le développeur. Ce mini-management garantit la cohérence technique et la satisfaction client.',
+    },
+  ];
+
+  const toolsMethodology = [
+    {
+      icon: MessageSquare,
+      title: 'Communication',
+      text: 'Slack ou Microsoft Teams pour des échanges clairs et rapides entre votre équipe, le manager Devit.IA et le développeur. Notion centralise les informations clés.',
+    },
+    {
+      icon: Kanban,
+      title: 'Pilotage agile',
+      text: 'Jira, Trello ou ClickUp pour la gestion des sprints, priorités et roadmaps. Rituels hebdomadaires et indicateurs partagés.',
+    },
+    {
+      icon: GitBranch,
+      title: 'Qualité du code',
+      text: 'GitLab, GitHub ou Bitbucket pour la CI/CD, les revues de merge et la traçabilité. Mesure de la qualité et du lead time.',
+    },
+    {
+      icon: ShieldCheck,
+      title: 'Sécurité & RGPD',
+      text: 'NDA, gestion des accès, journalisation. Documents et partages sécurisés via Microsoft 365 ou Google Workspace.',
+    },
+    {
+      icon: BarChart3,
+      title: 'Reporting',
+      text: 'Tableaux de bord Power BI ou Data Studio : vélocité, respect des délais, qualité des livrables, satisfaction.',
+    },
+    {
+      icon: Cpu,
+      title: 'Environnements',
+      text: 'Stacks conformes client, gestion des secrets, environnements de pré-prod/recette, monitoring applicatif.',
+    },
+    {
+      icon: UserSquare2,
+      title: 'Onboarding encadré',
+      text: 'Intégration en moins de 15 jours, supervisée par un manager Devit.IA. Accès, outillage et rituels prêts dès J1.',
+    },
+    {
+      icon: RefreshCw,
+      title: 'Amélioration continue',
+      text: 'Boucle d\'optimisation DevConnect™ : feedbacks, ajustements de staffing, montée en compétence, remédiation rapide.',
     },
   ];
 
@@ -86,6 +129,58 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
               className="btn-gradient inline-flex items-center justify-center space-x-2"
             >
               <span>Découvrir la Méthode DevConnect™</span>
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="outils-methode" className="section-padding relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Outils & méthodologie
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed mb-4">
+              Une collaboration fluide, sécurisée et mesurable à chaque étape de votre mission.
+            </p>
+            <p className="text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
+              Devit.IA standardise l'onboarding et le suivi grâce à un écosystème d'outils professionnels et des rituels agiles. Résultat : visibilité totale, intégration rapide et performance continue.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {toolsMethodology.map((tool, index) => (
+              <div
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+                style={{
+                  animationDelay: `${index * 90}ms`,
+                }}
+              >
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <tool.icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {tool.title}
+                </h3>
+                <p className="text-blue-100 leading-relaxed">
+                  {tool.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/methode"
+              className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+            >
+              <span>Découvrir la méthode DevConnect™</span>
               <ArrowRight size={20} />
             </Link>
           </div>
