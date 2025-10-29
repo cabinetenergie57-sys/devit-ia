@@ -42,7 +42,7 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
       icon: Kanban,
       title: 'Pilotage agile',
       text: 'Jira, Trello ou ClickUp pour la gestion des sprints, priorités et roadmaps. Rituels hebdomadaires et indicateurs partagés.',
-      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
       icon: GitBranch,
