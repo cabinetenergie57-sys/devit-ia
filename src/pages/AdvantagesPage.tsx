@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { CheckCircle, ArrowRight, MessageSquare, Kanban, GitBranch, ShieldCheck, BarChart3, Cpu, UserSquare2, RefreshCw } from 'lucide-react';
+import { CheckCircle, ArrowRight, MessageSquare, Kanban, GitBranch } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AdvantagesSection from '../components/AdvantagesSection';
 
@@ -36,41 +36,19 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
       icon: MessageSquare,
       title: 'Communication',
       text: 'Slack ou Microsoft Teams pour des échanges clairs et rapides entre votre équipe, le manager Devit.IA et le développeur. Notion centralise les informations clés.',
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
       icon: Kanban,
       title: 'Pilotage agile',
       text: 'Jira, Trello ou ClickUp pour la gestion des sprints, priorités et roadmaps. Rituels hebdomadaires et indicateurs partagés.',
+      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
     {
       icon: GitBranch,
       title: 'Qualité du code',
       text: 'GitLab, GitHub ou Bitbucket pour la CI/CD, les revues de merge et la traçabilité. Mesure de la qualité et du lead time.',
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Sécurité & RGPD',
-      text: 'NDA, gestion des accès, journalisation. Documents et partages sécurisés via Microsoft 365 ou Google Workspace.',
-    },
-    {
-      icon: BarChart3,
-      title: 'Reporting',
-      text: 'Tableaux de bord Power BI ou Data Studio : vélocité, respect des délais, qualité des livrables, satisfaction.',
-    },
-    {
-      icon: Cpu,
-      title: 'Environnements',
-      text: 'Stacks conformes client, gestion des secrets, environnements de pré-prod/recette, monitoring applicatif.',
-    },
-    {
-      icon: UserSquare2,
-      title: 'Onboarding encadré',
-      text: 'Intégration en moins de 15 jours, supervisée par un manager Devit.IA. Accès, outillage et rituels prêts dès J1.',
-    },
-    {
-      icon: RefreshCw,
-      title: 'Amélioration continue',
-      text: 'Boucle d\'optimisation DevConnect™ : feedbacks, ajustements de staffing, montée en compétence, remédiation rapide.',
+      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
     },
   ];
 
@@ -153,24 +131,34 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {toolsMethodology.map((tool, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105"
+                className="group bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/15 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105"
                 style={{
                   animationDelay: `${index * 90}ms`,
                 }}
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <tool.icon className="w-7 h-7 text-white" />
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={tool.image}
+                    alt={tool.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <tool.icon className="w-7 h-7 text-white" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {tool.title}
-                </h3>
-                <p className="text-blue-100 leading-relaxed">
-                  {tool.text}
-                </p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {tool.title}
+                  </h3>
+                  <p className="text-blue-100 leading-relaxed">
+                    {tool.text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
