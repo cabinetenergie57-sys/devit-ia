@@ -233,19 +233,20 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Suivi & Performance continue
+              </h2>
+              <p className="text-xl text-blue-200 mb-4 leading-relaxed max-w-3xl mx-auto">
+                Nous mesurons, analysons et améliorons chaque mission Devit.IA.
+              </p>
+              <p className="text-lg text-blue-100 leading-relaxed max-w-4xl mx-auto">
+                Parce qu'une collaboration réussie se mesure, Devit.IA suit en continu la performance technique, la qualité du code et la satisfaction client. Grâce à la méthode DevConnect™, nous combinons des indicateurs précis et des retours humains pour garantir des résultats durables.
+              </p>
+            </div>
+
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
-                <div className="mb-8">
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                    Suivi & Performance continue
-                  </h2>
-                  <p className="text-xl text-blue-200 mb-4 leading-relaxed">
-                    Nous mesurons, analysons et améliorons chaque mission Devit.IA.
-                  </p>
-                  <p className="text-lg text-blue-100 leading-relaxed">
-                    Parce qu'une collaboration réussie se mesure, Devit.IA suit en continu la performance technique, la qualité du code et la satisfaction client. Grâce à la méthode DevConnect™, nous combinons des indicateurs précis et des retours humains pour garantir des résultats durables.
-                  </p>
-                </div>
 
                 <div className="space-y-6">
                   {performanceFeatures.map((feature, index) => (
