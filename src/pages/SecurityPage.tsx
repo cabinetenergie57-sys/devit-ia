@@ -142,60 +142,6 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
 
       <SecurityLogosMarquee />
 
-      <section className="section-padding bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 md:p-12 border border-blue-100">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 rounded-full gradient-bg flex items-center justify-center shadow-xl">
-                    <Bot className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                    Lina répond à toutes vos questions de sécurité
-                  </h3>
-                  <p className="text-lg text-gray-700 mb-6">
-                    Notre assistante IA Lina est parfaitement formée sur l'ensemble de nos standards
-                    de sécurité, certifications et outils. Elle peut répondre en temps réel à toutes
-                    vos questions concernant la conformité RGPD, les certifications ISO 27001/SOC2,
-                    le chiffrement, les audits de sécurité et bien plus encore.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <button
-                      onClick={onLinaClick}
-                      className="btn-gradient inline-flex items-center justify-center space-x-2"
-                    >
-                      <MessageCircle className="w-5 h-5" />
-                      <span>Posez vos questions à Lina</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-blue-200">
-                <div className="grid md:grid-cols-3 gap-6 text-center">
-                  <div>
-                    <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
-                    <div className="text-gray-600">Disponibilité continue</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold gradient-text mb-2">100%</div>
-                    <div className="text-gray-600">Informations à jour</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold gradient-text mb-2">&lt;2min</div>
-                    <div className="text-gray-600">Temps de réponse moyen</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section-padding bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
@@ -247,6 +193,60 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
               >
                 Contactez notre équipe sécurité
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 md:p-12 border border-blue-100">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <div className="w-24 h-24 rounded-full gradient-bg flex items-center justify-center shadow-xl">
+                    <Bot className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                    Lina répond à toutes vos questions de sécurité
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-6">
+                    Notre assistante IA Lina est parfaitement formée sur l'ensemble de nos standards
+                    de sécurité, certifications et outils. Elle peut répondre en temps réel à toutes
+                    vos questions concernant la conformité RGPD, les certifications ISO 27001/SOC2,
+                    le chiffrement, les audits de sécurité et bien plus encore.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <button
+                      onClick={onLinaClick}
+                      className="btn-gradient inline-flex items-center justify-center space-x-2"
+                    >
+                      <MessageCircle className="w-5 h-5" />
+                      <span>Posez vos questions à Lina</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-blue-200">
+                <div className="grid md:grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
+                    <div className="text-gray-600">Disponibilité continue</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold gradient-text mb-2">100%</div>
+                    <div className="text-gray-600">Informations à jour</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold gradient-text mb-2">&lt;2min</div>
+                    <div className="text-gray-600">Temps de réponse moyen</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
