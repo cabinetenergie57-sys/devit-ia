@@ -196,31 +196,6 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
         </div>
       </section>
 
-      <section className="py-12 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="rounded-3xl p-6 md:p-8 text-center text-white">
-              <Shield className="w-12 h-12 mx-auto mb-4 drop-shadow-md" />
-              <h3 className="text-2xl md:text-3xl font-bold mb-3 drop-shadow-md">
-                Sécurité & RGPD
-              </h3>
-              <p className="text-base md:text-lg text-white mb-6 max-w-2xl mx-auto drop-shadow-sm">
-                Découvrez comment nos standards de sécurité peuvent protéger vos projets IT,
-                Data et IA tout en garantissant une conformité RGPD totale.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={onLinaClick}
-                  className="bg-white text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-xl hover:scale-105 inline-flex items-center justify-center space-x-2"
-                >
-                  <span>Parlez à Lina</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section-padding bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
