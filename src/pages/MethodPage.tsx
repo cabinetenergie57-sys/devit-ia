@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Target, Users, TrendingUp, RefreshCw, Check } from 'lucide-react';
+import { Target, Users, TrendingUp, RefreshCw, Check, BarChart3, ClipboardCheck, TrendingUp as TrendingUpIcon, Users as UsersIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface MethodPageProps {
@@ -39,6 +39,29 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
       title: 'Optimisation & Fidélisation',
       description:
         'La méthode DevConnect™ inclut une boucle d\'amélioration continue. Nous analysons les missions terminées pour améliorer le matching, la rapidité d\'intégration et la stabilité des équipes. Notre objectif : créer une relation long terme, où chaque mission devient un partenariat gagnant-gagnant.',
+    },
+  ];
+
+  const performanceFeatures = [
+    {
+      icon: BarChart3,
+      title: 'Indicateurs de performance (KPI)',
+      text: 'Nous suivons la vélocité, la qualité du code, le respect des délais et la stabilité technique via des outils tels que Jira, GitLab et Power BI.',
+    },
+    {
+      icon: ClipboardCheck,
+      title: 'Questionnaires de satisfaction client',
+      text: 'Nos clients reçoivent régulièrement un questionnaire simple et rapide afin d\'évaluer la communication, la réactivité et la qualité du livrable.',
+    },
+    {
+      icon: TrendingUpIcon,
+      title: 'Amélioration continue',
+      text: 'Les retours sont analysés par nos managers pour ajuster les process, renforcer la cohésion d\'équipe et améliorer l\'efficacité collective.',
+    },
+    {
+      icon: UsersIcon,
+      title: 'Suivi humain & technique',
+      text: 'Chaque mission est encadrée par un manager Devit.IA qui assure le reporting, les feedbacks bilatéraux et la relation de confiance avec le client.',
     },
   ];
 
@@ -196,6 +219,87 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
                 >
                   Parler à Lina
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="suivi-performance" className="section-padding relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="mb-8">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    Suivi & Performance continue
+                  </h2>
+                  <p className="text-xl text-blue-200 mb-4 leading-relaxed">
+                    Nous mesurons, analysons et améliorons chaque mission Devit.IA.
+                  </p>
+                  <p className="text-lg text-blue-100 leading-relaxed">
+                    Parce qu'une collaboration réussie se mesure, Devit.IA suit en continu la performance technique, la qualité du code et la satisfaction client. Grâce à la méthode DevConnect™, nous combinons des indicateurs précis et des retours humains pour garantir des résultats durables.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  {performanceFeatures.map((feature, index) => (
+                    <div
+                      key={index}
+                      className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 hover:translate-x-2"
+                      style={{
+                        animationDelay: `${index * 100}ms`,
+                      }}
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <feature.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-white mb-2">
+                            {feature.title}
+                          </h3>
+                          <p className="text-blue-100 leading-relaxed">
+                            {feature.text}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+                  >
+                    Contactez-nous pour un suivi personnalisé
+                  </Link>
+                </div>
+              </div>
+
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-2xl"></div>
+                  <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
+                    <img
+                      src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      alt="Analytics Dashboard"
+                      className="w-full h-auto rounded-2xl shadow-lg"
+                    />
+                    <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-6 shadow-2xl border-4 border-gray-900">
+                      <div className="text-white">
+                        <div className="text-4xl font-bold mb-1">95%</div>
+                        <div className="text-sm text-blue-100">Satisfaction client</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
