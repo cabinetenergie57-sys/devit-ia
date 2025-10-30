@@ -73,13 +73,13 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
       icon: FileCheck,
       title: 'Conformité et audits réguliers',
       description: 'Devit IA réalise des audits de sécurité réguliers et suit une politique de conformité continue. Référentiels et outils :',
-      tools: ['Tenable Nessus, Qualys (scans de vulnérabilité)', 'Drata, Vanta (conformité ISO 27001 / SOC2)', 'OneTrust (registre RGPD)'],
+      tools: ['Tenable Nessus, Qualys (scans de vulnérabilité)', 'Drata, Vanta (conformité et audits sécurité)', 'OneTrust (registre RGPD)'],
       color: 'from-pink-500 to-pink-600'
     },
     {
       icon: HardDrive,
       title: 'Chiffrement & sauvegardes',
-      description: 'Les données sont protégées par chiffrement AES-256 et les communications sécurisées via TLS 1.3. Sauvegardes automatiques quotidiennes sur environnements conformes ISO 27001. Solutions :',
+      description: 'Les données sont protégées par chiffrement AES-256 et les communications sécurisées via TLS 1.3. Sauvegardes automatiques quotidiennes sur environnements hautement sécurisés. Solutions :',
       tools: ['Acronis', 'Veeam', 'BitLocker'],
       color: 'from-red-500 to-red-600'
     }
@@ -98,7 +98,7 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
               Devit IA s'appuie sur les solutions les plus fiables du marché pour assurer la sécurité,
               la confidentialité et la conformité RGPD de ses environnements et de ses projets clients.
               Ces technologies sont reconnues pour leur fiabilité et leur conformité aux standards
-              internationaux (ISO 27001, SOC 2, RGPD).
+              internationaux (RGPD).
             </p>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
                   <p className="text-lg text-gray-700 mb-6">
                     Notre assistante IA Lina est parfaitement formée sur l'ensemble de nos standards
                     de sécurité, certifications et outils. Elle peut répondre en temps réel à toutes
-                    vos questions concernant la conformité RGPD, les certifications ISO 27001/SOC2,
+                    vos questions concernant la conformité RGPD,
                     le chiffrement, les audits de sécurité et bien plus encore.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
