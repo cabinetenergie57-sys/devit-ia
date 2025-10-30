@@ -175,13 +175,13 @@ export default function Footer({ onLinaClick }: FooterProps) {
               &copy; 2025 Devit.IA. Tous droits réservés.
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-white transition-colors">
+              <Link to="/contact" className="hover:text-white transition-colors">
                 Mentions légales
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+              <Link to="/contact" className="hover:text-white transition-colors">
                 Politique de confidentialité
-              </a>
-<Link to="/securite" className="hover:text-white transition-colors">
+              </Link>
+              <Link to="/securite" className="hover:text-white transition-colors">
                 Sécurité & RGPD
               </Link>
             </div>

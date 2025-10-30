@@ -7,6 +7,7 @@ interface SolutionsSectionProps {
 export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps) {
   const solutions = [
     {
+      id: 'regie',
       icon: Users,
       title: 'Régie nouvelle génération',
       description:
@@ -22,6 +23,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
         'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1260&h=840&fit=crop&q=80',
     },
     {
+      id: 'expert',
       icon: UserCheck,
       title: 'Expert à la carte',
       description:
@@ -37,6 +39,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
         'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1260&h=840&fit=crop&q=80',
     },
     {
+      id: 'cle',
       icon: Briefcase,
       title: 'Clé en main Devit.IA',
       description:
@@ -71,6 +74,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
           {solutions.map((solution, index) => (
             <div
               key={index}
+              id={solution.id}
               className={`card-elegant grid lg:grid-cols-2 gap-8 items-center ${
                 index % 2 === 1 ? 'lg:grid-flow-dense' : ''
               }`}
