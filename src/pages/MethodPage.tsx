@@ -266,46 +266,38 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              <div>
-
-                <div className="space-y-6">
-                  {performanceFeatures.map((feature, index) => (
-                    <div
-                      key={index}
-                      className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 hover:translate-x-2"
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                      }}
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <feature.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-bold text-white mb-2">
-                            {feature.title}
-                          </h3>
-                          <p className="text-blue-100 leading-relaxed">
-                            {feature.text}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-8">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                {performanceFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+                    style={{
+                      animationDelay: `${index * 100}ms`,
+                    }}
                   >
-                    Contactez-nous pour un suivi personnalisé
-                  </Link>
-                </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform mb-6">
+                        <feature.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-4">
+                        {feature.title}
+                      </h3>
+                      <p className="text-blue-100 leading-relaxed">
+                        {feature.text}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
 
-              <div>
+              <div className="mt-12 text-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+                >
+                  Contactez-nous pour un suivi personnalisé
+                </Link>
               </div>
             </div>
           </div>
