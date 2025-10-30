@@ -285,18 +285,20 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
               </div>
 
               <div className="order-1 lg:order-2">
-                <div className="relative">
+                <div className="relative h-full flex items-center">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-2xl"></div>
-                  <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
-                    <img
-                      src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      alt="Analytics Dashboard"
-                      className="w-full h-auto rounded-2xl shadow-lg"
-                    />
-                    <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-6 shadow-2xl border-4 border-gray-900">
-                      <div className="text-white">
-                        <div className="text-4xl font-bold mb-1">95%</div>
-                        <div className="text-sm text-blue-100">Satisfaction client</div>
+                  <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/20 shadow-2xl w-full">
+                    <div className="relative">
+                      <img
+                        src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Analytics Dashboard"
+                        className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-video"
+                      />
+                      <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-5 shadow-2xl border-4 border-gray-900">
+                        <div className="text-white">
+                          <div className="text-3xl font-bold mb-1">95%</div>
+                          <div className="text-xs text-blue-100">Satisfaction client</div>
+                        </div>
                       </div>
                     </div>
                   </div>
