@@ -240,13 +240,34 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
               <p className="text-xl text-blue-200 mb-4 leading-relaxed max-w-3xl mx-auto">
                 Nous mesurons, analysons et améliorons chaque mission Devit.IA.
               </p>
-              <p className="text-lg text-blue-100 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-lg text-blue-100 leading-relaxed max-w-4xl mx-auto mb-12">
                 Parce qu'une collaboration réussie se mesure, Devit.IA suit en continu la performance technique, la qualité du code et la satisfaction client. Grâce à la méthode DevConnect™, nous combinons des indicateurs précis et des retours humains pour garantir des résultats durables.
               </p>
+
+              <div className="max-w-3xl mx-auto mb-16">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-2xl"></div>
+                  <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/20 shadow-2xl">
+                    <div className="relative">
+                      <img
+                        src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Analytics Dashboard"
+                        className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-video"
+                      />
+                      <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-5 shadow-2xl border-4 border-gray-900">
+                        <div className="text-white">
+                          <div className="text-3xl font-bold mb-1">95%</div>
+                          <div className="text-xs text-blue-100">Satisfaction client</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div>
 
                 <div className="space-y-6">
                   {performanceFeatures.map((feature, index) => (
@@ -284,25 +305,7 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
                 </div>
               </div>
 
-              <div className="order-1 lg:order-2">
-                <div className="relative h-full flex items-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-2xl"></div>
-                  <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/20 shadow-2xl w-full">
-                    <div className="relative">
-                      <img
-                        src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Analytics Dashboard"
-                        className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-video"
-                      />
-                      <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-5 shadow-2xl border-4 border-gray-900">
-                        <div className="text-white">
-                          <div className="text-3xl font-bold mb-1">95%</div>
-                          <div className="text-xs text-blue-100">Satisfaction client</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div>
               </div>
             </div>
           </div>
