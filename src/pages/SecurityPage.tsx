@@ -1,11 +1,45 @@
-import { Shield, Lock, Code, Eye, FileCheck, HardDrive, CheckCircle2, Bot, MessageCircle } from 'lucide-react';
+import { Shield, Lock, Code, Eye, FileCheck, HardDrive, CheckCircle2, Bot, MessageCircle, ShieldCheck, KeyRound, AlertTriangle, Handshake } from 'lucide-react';
 import SecurityLogosMarquee from '../components/SecurityLogosMarquee';
+import { Link } from 'react-router-dom';
 
 interface SecurityPageProps {
   onLinaClick: () => void;
 }
 
 export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
+  const conformityFeatures = [
+    {
+      icon: ShieldCheck,
+      title: 'Nos engagements internes',
+      text: 'Accords de confidentialité (NDA), gestion des accès, stockage sécurisé, outils conformes RGPD (Microsoft 365, Google Workspace) et traçabilité des activités.'
+    },
+    {
+      icon: KeyRound,
+      title: 'Responsabilité client',
+      text: 'Chaque client reste responsable de la sécurité de ses environnements, mots de passe et outils internes. Devit.IA respecte et s\'adapte à ces politiques pour une conformité maximale.'
+    },
+    {
+      icon: Lock,
+      title: 'Protection des accès',
+      text: 'Nos collaborateurs utilisent des comptes nominatifs, avec authentification sécurisée et révocation immédiate des accès à la fin de mission.'
+    },
+    {
+      icon: FileCheck,
+      title: 'Conformité RGPD',
+      text: 'Les données traitées par Devit.IA respectent les principes du RGPD : finalité limitée, durée de conservation maîtrisée et confidentialité renforcée.'
+    },
+    {
+      icon: AlertTriangle,
+      title: 'Surveillance et prévention',
+      text: 'Des vérifications régulières sont réalisées pour s\'assurer du respect des engagements de confidentialité et de sécurité. Tout incident est signalé sans délai au client concerné.'
+    },
+    {
+      icon: Handshake,
+      title: 'Collaboration sécurisée',
+      text: 'Devit.IA accompagne ses clients dans la mise en place de protocoles de sécurité adaptés à leur contexte, afin d\'assurer une collaboration fluide et conforme.'
+    }
+  ];
+
   const securityBlocks = [
     {
       icon: Shield,
@@ -182,6 +216,62 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
                   <span>Parlez à Lina</span>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Sécurité & conformité Devit.IA
+              </h2>
+              <p className="text-xl text-blue-100 mb-4 leading-relaxed max-w-3xl mx-auto">
+                Une approche collaborative pour protéger vos données et vos environnements
+              </p>
+              <p className="text-lg text-blue-200 leading-relaxed max-w-4xl mx-auto">
+                La sécurité est une priorité partagée. Devit.IA applique des standards rigoureux en interne tout en respectant les politiques, outils et règles d'accès de chaque client. Notre rôle est d'accompagner et d'encadrer les bonnes pratiques, tout en laissant au client la maîtrise totale de ses environnements et de sa sécurité opérationnelle.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              {conformityFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
+                >
+                  <div className="flex flex-col items-center text-center">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform mb-6">
+                      <feature.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-4">
+                      {feature.title}
+                    </h3>
+                    <p className="text-blue-100 leading-relaxed">
+                      {feature.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-8 rounded-full hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+              >
+                Contactez notre équipe sécurité
+              </Link>
             </div>
           </div>
         </div>
