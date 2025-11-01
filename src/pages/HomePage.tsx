@@ -4,12 +4,20 @@ import LinaSection from '../components/LinaSection';
 import BlogSection from '../components/BlogSection';
 import { Database, Shield, TrendingUp, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../utils/seo';
 
 interface HomePageProps {
   onLinaClick: () => void;
 }
 
 export default function HomePage({ onLinaClick }: HomePageProps) {
+  useSEO({
+    title: 'Devit.IA – Externalisation IT Francophone Agile | Nearshore Maroc',
+    description: 'Réduisez vos coûts IT de 50% avec la méthode DevConnect™. Développeurs et data analysts francophones au Maroc pour PME en France, Belgique, Suisse, Canada.',
+    keywords: 'externalisation IT francophone, nearshore Maroc, développeurs francophones, DevConnect, externalisation agile, TJM développeur, offshore francophone, PME startup, data analysts Maroc',
+    canonical: 'https://devit-ia.com/'
+  });
+
   const keyBenefits = [
     {
       icon: TrendingUp,

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Chart, ChartConfiguration, registerables } from 'chart.js';
 import { TrendingUp, Users, DollarSign, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../utils/seo';
 
 Chart.register(...registerables);
 
@@ -52,6 +53,13 @@ const marketData: MarketData[] = [
 ];
 
 export default function EstimationPage() {
+  useSEO({
+    title: 'Estimations & TJM Développeurs | Marché Francophone | Devit.IA',
+    description: 'Comparatif des TJM développeurs en France, Belgique, Suisse, Canada et Maroc. Économisez jusqu’à 50% avec Devit.IA. Tarifs transparents, qualité garantie.',
+    keywords: 'TJM développeur, tarifs IT francophone, économies externalisation, coûts développeur Maroc, estimation projet IT, comparatif tarifs',
+    canonical: 'https://devit-ia.com/estimation'
+  });
+
   const chartRef = useRef<HTMLCanvasElement>(null);
   const chartInstanceRef = useRef<Chart | null>(null);
 

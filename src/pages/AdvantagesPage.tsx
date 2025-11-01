@@ -2,12 +2,20 @@ import { useEffect, useState } from 'react';
 import { CheckCircle, ArrowRight, MessageSquare, Kanban, GitBranch, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AdvantagesSection from '../components/AdvantagesSection';
+import { useSEO } from '../utils/seo';
 
 interface AdvantagesPageProps {
   onLinaClick: () => void;
 }
 
 export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
+  useSEO({
+    title: 'Avantages Nearshore Francophone | Devit.IA Maroc',
+    description: 'Économies jusqu’à 45%, talents certifiés, même fuseau horaire. Externalisation IT et Data sécurisée avec DevConnect™ pour PME francophones.',
+    keywords: 'avantages nearshore, économies IT, talents Maroc, fuseau horaire francophone, RGPD offshore, DevConnect, régie dédiée, management technique',
+    canonical: 'https://devit-ia.com/avantages'
+  });
+
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {

@@ -34,9 +34,9 @@ export default function Hero({ onLinaClick }: HeroProps) {
         <div className="max-w-3xl mx-auto">
           <div className="backdrop-blur-md bg-white/10 rounded-3xl p-6 md:p-8 lg:p-10 shadow-2xl border border-white/20 animate-fade-in-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-5">
-              La nouvelle génération du{' '}
+              Externalisation IT & Data{' '}
               <span className="block mt-2 bg-gradient-to-r from-[#667eea] via-[#764ba2] to-[#f093fb] bg-clip-text text-transparent">
-                nearshore francophone
+                pour entreprises francophones
               </span>
             </h1>
 

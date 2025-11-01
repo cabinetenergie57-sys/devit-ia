@@ -1,12 +1,25 @@
 import { Shield, Lock, Code, Eye, FileCheck, HardDrive, CheckCircle2, Bot, MessageCircle, ShieldCheck, KeyRound, AlertTriangle, Handshake } from 'lucide-react';
 import SecurityLogosMarquee from '../components/SecurityLogosMarquee';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../utils/seo';
+import { useEffect } from 'react';
 
 interface SecurityPageProps {
   onLinaClick: () => void;
 }
 
 export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
+  useSEO({
+    title: 'Sécurité & RGPD | Externalisation IT Conforme | Devit.IA',
+    description: 'Conformité RGPD, NDA, accès sécurisés, audits réguliers. Devit.IA garantit une externalisation IT et Data sécurisée pour les entreprises francophones.',
+    keywords: 'RGPD offshore, sécurité IT, NDA confidentialité, accès sécurisés, audit sécurité, conformité données, externalisation sécurisée',
+    canonical: 'https://devit-ia.com/securite'
+  });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const conformityFeatures = [
     {
       icon: ShieldCheck,

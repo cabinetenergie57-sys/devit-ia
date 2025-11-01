@@ -1,12 +1,20 @@
 import { useEffect } from 'react';
 import SolutionsSection from '../components/SolutionsSection';
 import MethodSection from '../components/MethodSection';
+import { useSEO } from '../utils/seo';
 
 interface SolutionsPageProps {
   onLinaClick: () => void;
 }
 
 export default function SolutionsPage({ onLinaClick }: SolutionsPageProps) {
+  useSEO({
+    title: 'Solutions Nearshore IT & Data | Devit.IA Francophone',
+    description: 'Externalisation IT et Data sur-mesure pour PME francophones. Développement web, mobile, data engineering et IA. Méthode DevConnect™ éprouvée.',
+    keywords: 'développement web mobile, data engineering, IA machine learning, externalisation agile, équipe dédiée, React Angular Vue, Python Java, nearshore Maroc',
+    canonical: 'https://devit-ia.com/solutions'
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -1,12 +1,20 @@
 import { useEffect } from 'react';
 import ContactSection from '../components/ContactSection';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { useSEO } from '../utils/seo';
 
 interface ContactPageProps {
   onLinaClick: () => void;
 }
 
 export default function ContactPage({ onLinaClick }: ContactPageProps) {
+  useSEO({
+    title: 'Contact | Devit.IA – Parlons de Votre Projet IT',
+    description: 'Contactez Devit.IA pour externaliser vos projets IT et Data. Devis gratuit, support 24/7, expertise francophone. Maroc, France, Belgique, Suisse, Canada.',
+    keywords: 'contact Devit.IA, devis IT, support francophone, externalisation Maroc, projet IT Data, assistance technique, compte dédié',
+    canonical: 'https://devit-ia.com/contact'
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

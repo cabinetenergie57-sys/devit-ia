@@ -1,12 +1,20 @@
 import { useEffect } from 'react';
 import { Target, Users, TrendingUp, RefreshCw, Check, BarChart3, ClipboardCheck, TrendingUp as TrendingUpIcon, Users as UsersIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../utils/seo';
 
 interface MethodPageProps {
   onLinaClick: () => void;
 }
 
 export default function MethodPage({ onLinaClick }: MethodPageProps) {
+  useSEO({
+    title: 'Méthode DevConnect™ | Externalisation IT Sans Friction',
+    description: 'Onboarding en 15 jours, suivi agile, qualité garantie. La méthode exclusive Devit.IA pour l’externalisation IT et Data des entreprises francophones.',
+    keywords: 'DevConnect méthode, onboarding développeur, suivi agile, KPI performance, management offshore, intégration rapide, externalisation structurée',
+    canonical: 'https://devit-ia.com/methode'
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

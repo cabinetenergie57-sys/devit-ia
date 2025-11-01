@@ -1,11 +1,19 @@
 import { useEffect } from 'react';
 import { Target, Sparkles, Repeat } from 'lucide-react';
+import { useSEO } from '../utils/seo';
 
 interface AboutPageProps {
   onLinaClick: () => void;
 }
 
 export default function AboutPage({ onLinaClick }: AboutPageProps) {
+  useSEO({
+    title: 'A propos | Devit.IA – Externalisation IT Francophone',
+    description: 'Découvrez Devit.IA, votre partenaire nearshore pour l’externalisation IT et Data. Méthode DevConnect™, talents marocains, service francophone.',
+    keywords: 'Devit.IA, nearshore Maroc, externalisation francophone, DevConnect, mission entreprise, talents IT Maroc, PME startups',
+    canonical: 'https://devit-ia.com/apropos'
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
