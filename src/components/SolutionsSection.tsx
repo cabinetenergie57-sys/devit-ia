@@ -1,4 +1,5 @@
-import { Users, UserCheck, Briefcase, ArrowRight } from 'lucide-react';
+import { Users, UserCheck, Briefcase, ArrowRight, CheckCircle, Shield, Zap, Users as UsersIcon, Repeat2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface SolutionsSectionProps {
   onLinaClick: () => void;
@@ -120,6 +121,145 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
             </div>
           ))}
         </div>
+
+        {/* New Section: Recrutement optimisé et sécurisé */}
+        <section
+          id="recrutement-optimise-securise"
+          data-section="recrutement-optimise"
+          className="mt-24"
+          aria-label="Recrutement optimisé et sécurisé Devit.IA"
+        >
+          <div className="card-elegant">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div style={{ maxWidth: '640px' }}>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#0B1220' }}>
+                  Recrutement optimisé et sécurisé
+                </h2>
+                <p className="text-xl mb-6" style={{ color: '#334155', lineHeight: '1.7' }}>
+                  Nous avons le développeur — pour un recrutement plus rapide, qualitatif et sûr pour votre équipe.
+                </p>
+                <p className="text-lg mb-8" style={{ color: '#334155', lineHeight: '1.7' }}>
+                  Avec Devit.IA, vous accédez à des développeurs francophones pré-qualifiés via la méthode DevConnect™. Notre process couvre l'évaluation technique, la conformité et l'intégration &lt; 15 jours, avec mini-management et suivi de performance.
+                </p>
+
+                {/* Bullets */}
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                         style={{ background: 'linear-gradient(135deg, rgba(37,99,235,.12), rgba(109,40,217,.12))' }}>
+                      <CheckCircle className="w-6 h-6" style={{ color: '#2563EB' }} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-1" style={{ color: '#0B1220' }}>
+                        Pré-qualification complète
+                      </h3>
+                      <p style={{ color: '#334155' }}>
+                        Tests techniques, entretien en français, soft-skills et adéquation au contexte PME.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                         style={{ background: 'linear-gradient(135deg, rgba(37,99,235,.12), rgba(109,40,217,.12))' }}>
+                      <Shield className="w-6 h-6" style={{ color: '#2563EB' }} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-1" style={{ color: '#0B1220' }}>
+                        Confiance & conformité
+                      </h3>
+                      <p style={{ color: '#334155' }}>
+                        NDA, gestion des accès selon vos règles, pratiques alignées RGPD, traçabilité.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                         style={{ background: 'linear-gradient(135deg, rgba(37,99,235,.12), rgba(109,40,217,.12))' }}>
+                      <Zap className="w-6 h-6" style={{ color: '#2563EB' }} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-1" style={{ color: '#0B1220' }}>
+                        Onboarding &lt; 15 jours
+                      </h3>
+                      <p style={{ color: '#334155' }}>
+                        Immersion rapide dans vos outils (Jira, GitLab, Slack, M365…) et vos rituels.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                         style={{ background: 'linear-gradient(135deg, rgba(37,99,235,.12), rgba(109,40,217,.12))' }}>
+                      <UsersIcon className="w-6 h-6" style={{ color: '#2563EB' }} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-1" style={{ color: '#0B1220' }}>
+                        Mini-management inclus
+                      </h3>
+                      <p style={{ color: '#334155' }}>
+                        Manager Devit.IA dédié, points réguliers, KPI partagés, plans d'amélioration.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                         style={{ background: 'linear-gradient(135deg, rgba(37,99,235,.12), rgba(109,40,217,.12))' }}>
+                      <Repeat2 className="w-6 h-6" style={{ color: '#2563EB' }} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-1" style={{ color: '#0B1220' }}>
+                        Remplacement garanti
+                      </h3>
+                      <p style={{ color: '#334155' }}>
+                        En cas d'inadéquation, remplacement accéléré pour assurer la continuité.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-full transition-all hover:scale-105 hover:shadow-xl"
+                    style={{
+                      background: 'linear-gradient(90deg,#2563EB,#6D28D9)',
+                      borderRadius: '999px'
+                    }}
+                  >
+                    Obtenir 3 profils qualifiés
+                  </Link>
+                  <Link
+                    to="/methode"
+                    className="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-full border-2 transition-all hover:bg-gray-50"
+                    style={{
+                      color: '#2563EB',
+                      borderColor: '#2563EB'
+                    }}
+                  >
+                    Découvrir la méthode DevConnect™
+                  </Link>
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="lg:order-last">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ aspectRatio: '4/5' }}>
+                  <img
+                    src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Équipe de développeurs collaborant dans un bureau moderne"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   );
