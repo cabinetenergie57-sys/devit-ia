@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
-import { Target, Users, TrendingUp, RefreshCw, Check, BarChart3, ClipboardCheck, TrendingUp as TrendingUpIcon, Users as UsersIcon } from 'lucide-react';
+import { Target, Users, TrendingUp, RefreshCw, Check, BarChart3, ClipboardCheck, TrendingUp as TrendingUpIcon, Users as UsersIcon, HelpCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSEO } from '../utils/seo';
+import { faqSchema } from '../utils/structuredData';
 
 interface MethodPageProps {
   onLinaClick: () => void;
@@ -17,6 +18,23 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const faqData = faqSchema([
+      { question: "Comment se déroule la sélection des profils avec DevConnect™ ?", answer: "Nous analysons votre besoin technique et culturel, puis sélectionnons les développeurs francophones les plus adaptés selon la stack, le secteur et l'expérience. Chaque profil est testé techniquement et évalué sur son niveau de français." },
+      { question: "Qu'est-ce que le mini-management Devit.IA ?", answer: "Un Account Manager dédié suit votre mission en continu : points réguliers, reporting mensuel, ajustements si nécessaire. Ce suivi garantit la performance et la satisfaction tout au long du projet." },
+      { question: "Comment mesurez-vous la performance des développeurs ?", answer: "Nous utilisons des KPI techniques (vélocité, qualité code, respect délais) via Jira, GitLab et Power BI, complétés par des questionnaires de satisfaction client pour une vision à 360°." },
+      { question: "L'onboarding prend vraiment moins de 15 jours ?", answer: "Oui, grâce à DevConnect™ nous gérons contrats, accès outils, environnement de travail et formation. Le développeur est opérationnel dès le jour 1, sans friction pour votre équipe." },
+      { question: "La méthode DevConnect™ est-elle adaptée aux petites structures ?", answer: "Absolument. Nos process sont pensés pour les PME, startups et ETI qui veulent renforcer leurs équipes tech sans la lourdeur du recrutement traditionnel ni sacrifier la qualité." }
+    ]);
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   const pillars = [
@@ -85,14 +103,48 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
         <div className="bg-gradient-to-br from-blue-50 to-white py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              La Méthode <span className="gradient-text">DevConnect™</span>
+              Qu'apporte la méthode exclusive <span className="gradient-text">DevConnect™</span> à votre externalisation IT ?
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              La méthode exclusive qui transforme l'externalisation en performance
+              La méthode propriétaire qui transforme l'externalisation en performance mesurable
             </p>
           </div>
         </div>
       </div>
+
+      {/* Answer Box Section */}
+      <section className="section-padding bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-600">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <HelpCircle className="w-6 h-6 text-blue-600" />
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Réponse express</h2>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    DevConnect™ est une méthode propriétaire qui structure l'externalisation IT en 4 étapes : sélection stratégique des profils, intégration fluide en moins de 15 jours, suivi mensuel de performance avec KPI, et optimisation continue. Résultat : économies de 40 à 50%, qualité garantie, et zéro friction.
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Link to="/avantages" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      Voir les avantages <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/securite" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      Sécurité & RGPD <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/contact" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      Démarrer une mission <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,8 +170,8 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
 
           <div className="text-center mb-6">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Les 4 piliers de la{' '}
-              <span className="gradient-text">méthode DevConnect™</span>
+              Comment fonctionne la{' '}
+              <span className="gradient-text">méthode DevConnect™</span> en 4 étapes ?
             </h2>
           </div>
 
@@ -243,7 +295,7 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Suivi & Performance continue
+                Comment mesurez-vous la performance et la satisfaction client ?
               </h2>
               <p className="text-xl text-blue-200 mb-4 leading-relaxed max-w-3xl mx-auto">
                 Nous mesurons, analysons et améliorons chaque mission Devit.IA.
@@ -306,6 +358,37 @@ export default function MethodPage({ onLinaClick }: MethodPageProps) {
                 >
                   Contactez-nous pour un suivi personnalisé
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mini FAQ Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes sur DevConnect™</h2>
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Comment se déroule la sélection des profils avec DevConnect™ ?</h3>
+                <p className="text-gray-700">Nous analysons votre besoin technique et culturel, puis sélectionnons les développeurs francophones les plus adaptés selon la stack, le secteur et l'expérience. Chaque profil est testé techniquement et évalué sur son niveau de français.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Qu'est-ce que le mini-management Devit.IA ?</h3>
+                <p className="text-gray-700">Un Account Manager dédié suit votre mission en continu : points réguliers, reporting mensuel, ajustements si nécessaire. Ce suivi garantit la performance et la satisfaction tout au long du projet.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Comment mesurez-vous la performance des développeurs ?</h3>
+                <p className="text-gray-700">Nous utilisons des KPI techniques (vélocité, qualité code, respect délais) via Jira, GitLab et Power BI, complétés par des questionnaires de satisfaction client pour une vision à 360°.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">L'onboarding prend vraiment moins de 15 jours ?</h3>
+                <p className="text-gray-700">Oui, grâce à DevConnect™ nous gérons contrats, accès outils, environnement de travail et formation. Le développeur est opérationnel dès le jour 1, sans friction pour votre équipe.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">La méthode DevConnect™ est-elle adaptée aux petites structures ?</h3>
+                <p className="text-gray-700">Absolument. Nos process sont pensés pour les PME, startups et ETI qui veulent renforcer leurs équipes tech sans la lourdeur du recrutement traditionnel ni sacrifier la qualité.</p>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Target, Sparkles, Repeat } from 'lucide-react';
 import { useSEO } from '../utils/seo';
+import { faqSchema } from '../utils/structuredData';
 
 interface AboutPageProps {
   onLinaClick: () => void;
@@ -16,6 +17,21 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const faqData = faqSchema([
+      { question: "Depuis quand Devit.IA existe-t-elle ?", answer: "Devit.IA accompagne les entreprises francophones dans leur transformation digitale avec une expertise cumulée de plusieurs années en externalisation IT et Data au Maroc." },
+      { question: "Où sont basés vos développeurs ?", answer: "Nos talents sont basés au Maroc, dans des environnements professionnels modernes. Ils travaillent en remote pour vos équipes en France, Belgique, Suisse et Canada, dans le même fuseau horaire." },
+      { question: "Quelle est votre vision pour l'externalisation francophone ?", answer: "Rendre l'externalisation IT simple, humaine et performante grâce à DevConnect™. Nous voulons devenir le partenaire de référence des PME et startups francophones pour leurs projets tech." }
+    ]);
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
   return (
     <div className="min-h-screen bg-white">
@@ -31,7 +47,7 @@ export default function AboutPage({ onLinaClick }: AboutPageProps) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
-              A propos de Devit.IA
+              Qui est Devit.IA et quelle est notre mission pour les entreprises francophones ?
             </h1>
             <p className="text-lg md:text-xl mb-8 text-blue-50 leading-relaxed drop-shadow-md max-w-3xl mx-auto">
               Réinventer l'externalisation IT & Data pour les PME francophones grâce à la méthode DevConnect™.

@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { Chart, ChartConfiguration, registerables } from 'chart.js';
-import { TrendingUp, Users, DollarSign, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { TrendingUp, Users, DollarSign, Award, ArrowRight, CheckCircle2, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSEO } from '../utils/seo';
+import { faqSchema } from '../utils/structuredData';
 
 Chart.register(...registerables);
 
@@ -65,6 +66,22 @@ export default function EstimationPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const faqData = faqSchema([
+      { question: "Quel est le TJM moyen d'un développeur avec Devit.IA ?", answer: "Le TJM moyen est d'environ 250€/jour, soit 50% moins cher qu'en France, Belgique ou Suisse. Les tarifs varient selon l'expérience et la technologie, mais restent toujours compétitifs." },
+      { question: "Les économies incluent-elles le management et le suivi ?", answer: "Oui, le mini-management DevConnect™ est inclus dans nos tarifs. Vous bénéficiez d'un Account Manager dédié, de reportings mensuels et d'un suivi KPI sans coût supplémentaire." },
+      { question: "Comment comparer les coûts entre pays francophones ?", answer: "Notre outil d'estimation permet de comparer les TJM entre France, Belgique, Suisse, Canada et Maroc. Vous visualisez vos économies potentielles en temps réel selon votre besoin." },
+      { question: "Y a-t-il des frais cachés ?", answer: "Non, nos tarifs sont transparents et all-inclusive : développeur, management, outils, conformité RGPD. Pas de surprise, juste la qualité DevConnect™ au juste prix." }
+    ]);
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   useEffect(() => {

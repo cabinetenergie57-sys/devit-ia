@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { CheckCircle, ArrowRight, MessageSquare, Kanban, GitBranch, ChevronDown } from 'lucide-react';
+import { CheckCircle, ArrowRight, MessageSquare, Kanban, GitBranch, ChevronDown, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AdvantagesSection from '../components/AdvantagesSection';
 import { useSEO } from '../utils/seo';
+import { faqSchema } from '../utils/structuredData';
 
 interface AdvantagesPageProps {
   onLinaClick: () => void;
@@ -20,6 +21,16 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const faqData = faqSchema(faqItems);
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   const faqItems = [
@@ -111,14 +122,48 @@ export default function AdvantagesPage({ onLinaClick }: AdvantagesPageProps) {
         <div className="bg-gradient-to-br from-blue-50 to-white py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Les <span className="gradient-text">Avantages</span> Devit.IA
+              Pourquoi choisir un <span className="gradient-text">nearshore francophone</span> avec Devit.IA ?
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Pourquoi choisir l'externalisation au Maroc avec Devit.IA pour vos projets Data et IT
+              Découvrez les avantages compétitifs de l'externalisation IT au Maroc pour les entreprises francophones
             </p>
           </div>
         </div>
       </div>
+
+      {/* Answer Box Section */}
+      <section className="section-padding bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-600">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <HelpCircle className="w-6 h-6 text-blue-600" />
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Réponse express</h2>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Le nearshore Maroc avec Devit.IA offre des économies de 40 à 50%, le même fuseau horaire qu'en Europe, des développeurs francophones certifiés, et une conformité RGPD totale. Avec DevConnect™, vous bénéficiez d'un onboarding rapide et d'un suivi de qualité continu.
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Link to="/methode" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      La méthode DevConnect™ <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/estimation" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      Estimer mes économies <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/contact" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      Nous contacter <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <AdvantagesSection onLinaClick={onLinaClick} />
 
       <section className="section-padding bg-white">
