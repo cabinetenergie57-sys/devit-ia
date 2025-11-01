@@ -23,7 +23,8 @@ export default function ContactPage({ onLinaClick }: ContactPageProps) {
     const faqData = faqSchema([
       { question: "Quel est le délai pour démarrer une mission avec Devit.IA ?", answer: "Grâce à la méthode DevConnect™, le démarrage complet (sélection, onboarding, démarrage opérationnel) se fait en moins de 15 jours. Pour une urgence, nous pouvons accélérer le process selon les disponibilités." },
       { question: "Quelles informations sont nécessaires pour un devis ?", answer: "Nous avons besoin du profil recherché (développeur, data analyst), de la stack technique, de la durée estimée, du niveau d'expérience souhaité et de vos contraintes spécifiques (fuseau horaire, certifications, etc.)." },
-      { question: "Comment vérifier la disponibilité des profils ?", answer: "Contactez-nous via le formulaire ou parlez avec Lina pour connaître en temps réel les profils disponibles. Nous mettons à jour nos disponibilités quotidiennement selon les missions en cours." }
+      { question: "Comment vérifier la disponibilité des profils ?", answer: "Contactez-nous via le formulaire ou parlez avec Lina pour connaître en temps réel les profils disponibles. Nous mettons à jour nos disponibilités quotidiennement selon les missions en cours." },
+      { question: "Peut-on planifier un appel ou un audit avec Lina ?", answer: "Oui, Lina peut planifier un appel découverte avec nos experts ou organiser un audit technique de votre besoin. Discutez avec elle 24/7 via le chat, ou contactez-nous directement pour fixer un rendez-vous selon vos disponibilités." }
     ]);
 
     const script = document.createElement('script');
@@ -144,6 +145,10 @@ export default function ContactPage({ onLinaClick }: ContactPageProps) {
               <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">Comment vérifier la disponibilité des profils ?</h3>
                 <p className="text-gray-700">Contactez-nous via le formulaire ou parlez avec Lina pour connaître en temps réel les profils disponibles. Nous mettons à jour nos disponibilités quotidiennement selon les missions en cours.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Peut-on planifier un appel ou un audit avec Lina ?</h3>
+                <p className="text-gray-700">Oui, Lina peut planifier un appel découverte avec nos experts ou organiser un audit technique de votre besoin. Discutez avec elle 24/7 via le chat, ou contactez-nous directement pour fixer un rendez-vous selon vos disponibilités.</p>
               </div>
             </div>
           </div>
