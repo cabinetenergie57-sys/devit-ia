@@ -55,7 +55,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
       cta2: 'Découvrir la méthode DevConnect™',
       cta2Link: '/methode',
       image:
-        'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        '/IMG_8623 copy.JPG',
       isRecrutement: true,
     },
   ];
