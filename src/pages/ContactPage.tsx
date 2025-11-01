@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import ContactSection from '../components/ContactSection';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, HelpCircle, ArrowRight } from 'lucide-react';
 import { useSEO } from '../utils/seo';
+import { Link } from 'react-router-dom';
+import { faqSchema } from '../utils/structuredData';
 
 interface ContactPageProps {
   onLinaClick: () => void;
@@ -17,6 +19,21 @@ export default function ContactPage({ onLinaClick }: ContactPageProps) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const faqData = faqSchema([
+      { question: "Quel est le délai pour démarrer une mission avec Devit.IA ?", answer: "Grâce à la méthode DevConnect™, le démarrage complet (sélection, onboarding, démarrage opérationnel) se fait en moins de 15 jours. Pour une urgence, nous pouvons accélérer le process selon les disponibilités." },
+      { question: "Quelles informations sont nécessaires pour un devis ?", answer: "Nous avons besoin du profil recherché (développeur, data analyst), de la stack technique, de la durée estimée, du niveau d'expérience souhaité et de vos contraintes spécifiques (fuseau horaire, certifications, etc.)." },
+      { question: "Comment vérifier la disponibilité des profils ?", answer: "Contactez-nous via le formulaire ou parlez avec Lina pour connaître en temps réel les profils disponibles. Nous mettons à jour nos disponibilités quotidiennement selon les missions en cours." }
+    ]);
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   const contactInfo = [
@@ -48,10 +65,10 @@ export default function ContactPage({ onLinaClick }: ContactPageProps) {
         <div className="bg-gradient-to-br from-blue-50 to-white py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Contactez <span className="gradient-text">Devit.IA</span>
+              Comment démarrer votre mission développeur avec <span className="gradient-text">Devit.IA</span> ?
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Notre équipe est à votre écoute pour répondre à toutes vos questions
+              Contactez-nous pour renforcer vos équipes IT et Data avec des talents francophones certifiés
             </p>
           </div>
         </div>
@@ -77,7 +94,61 @@ export default function ContactPage({ onLinaClick }: ContactPageProps) {
         </div>
       </section>
 
+      {/* Answer Box Section */}
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-600">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <HelpCircle className="w-6 h-6 text-blue-600" />
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Réponse express</h2>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Contactez-nous par téléphone (+33 7 63 26 26 09), email (contact@devitia.ma) ou formulaire. Discutez avec Lina 24/7 pour des réponses immédiates. Démarrage possible en moins de 15 jours avec DevConnect™. Devis gratuit et personnalisé.
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Link to="/methode" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      Découvrir DevConnect™ <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/estimation" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      Estimer mes économies <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ContactSection onLinaClick={onLinaClick} />
+
+      {/* Mini FAQ Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes - Contact & Démarrage</h2>
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Quel est le délai pour démarrer une mission avec Devit.IA ?</h3>
+                <p className="text-gray-700">Grâce à la méthode DevConnect™, le démarrage complet (sélection, onboarding, démarrage opérationnel) se fait en moins de 15 jours. Pour une urgence, nous pouvons accélérer le process selon les disponibilités.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Quelles informations sont nécessaires pour un devis ?</h3>
+                <p className="text-gray-700">Nous avons besoin du profil recherché (développeur, data analyst), de la stack technique, de la durée estimée, du niveau d'expérience souhaité et de vos contraintes spécifiques (fuseau horaire, certifications, etc.).</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Comment vérifier la disponibilité des profils ?</h3>
+                <p className="text-gray-700">Contactez-nous via le formulaire ou parlez avec Lina pour connaître en temps réel les profils disponibles. Nous mettons à jour nos disponibilités quotidiennement selon les missions en cours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,8 +1,9 @@
-import { Shield, Lock, Code, Eye, FileCheck, HardDrive, CheckCircle2, Bot, MessageCircle, ShieldCheck, KeyRound, AlertTriangle, Handshake } from 'lucide-react';
+import { Shield, Lock, Code, Eye, FileCheck, HardDrive, CheckCircle2, Bot, MessageCircle, ShieldCheck, KeyRound, AlertTriangle, Handshake, HelpCircle, ArrowRight } from 'lucide-react';
 import SecurityLogosMarquee from '../components/SecurityLogosMarquee';
 import { Link } from 'react-router-dom';
 import { useSEO } from '../utils/seo';
 import { useEffect } from 'react';
+import { faqSchema } from '../utils/structuredData';
 
 interface SecurityPageProps {
   onLinaClick: () => void;
@@ -18,6 +19,22 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const faqData = faqSchema([
+      { question: "Comment Devit.IA protège les données de ses clients ?", answer: "Devit.IA applique des NDA stricts, une gestion sécurisée des accès nominatifs, un stockage chiffré (AES-256), et des outils conformes RGPD (Microsoft 365, Google Workspace). Surveillance continue et audits réguliers garantissent la confidentialité." },
+      { question: "Le RGPD s'applique-t-il aux entreprises marocaines qui travaillent avec l'Europe ?", answer: "Oui, toute entreprise marocaine qui traite des données de citoyens européens doit respecter le RGPD. Devit.IA aligne ses process sur ces exigences : finalité limitée, conservation maîtrisée, confidentialité renforcée et droit d'accès." },
+      { question: "Qui est responsable des accès et des mots de passe ?", answer: "Le client reste maître de ses environnements, mots de passe et politiques de sécurité. Devit.IA utilise des comptes nominatifs avec authentification sécurisée et révocation immédiate des accès en fin de mission." },
+      { question: "Quelles sont les mesures de sécurité internes mises en place par Devit.IA ?", answer: "Gestion IAM centralisée (Azure AD, Okta), coffres-forts pour secrets (Vault, Key Vault), pipelines sécurisés (Snyk, SonarQube), surveillance 24/7 (Datadog, CrowdStrike), audits réguliers (Nessus, Vanta) et chiffrement AES-256/TLS 1.3." }
+    ]);
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   const conformityFeatures = [
@@ -105,14 +122,43 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Outils & Standards de <span className="gradient-text">Sécurité</span>
+              Comment Devit.IA gère la <span className="gradient-text">sécurité</span> et la conformité RGPD avec vos équipes ?
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Devit IA s'appuie sur les solutions les plus fiables du marché pour assurer la sécurité,
               la confidentialité et la conformité RGPD de ses environnements et de ses projets clients.
-              Ces technologies sont reconnues pour leur fiabilité et leur conformité aux standards
-              internationaux (RGPD).
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Answer Box Section */}
+      <section className="section-padding bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-600">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <HelpCircle className="w-6 h-6 text-blue-600" />
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Réponse express</h2>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Devit.IA applique des NDA stricts, une gestion sécurisée des accès, un chiffrement AES-256, et une conformité RGPD totale. Outils certifiés (Azure AD, Vault, Snyk), surveillance 24/7, audits réguliers. Le client reste maître de ses environnements et politiques de sécurité.
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Link to="/methode" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      La méthode DevConnect™ <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/contact" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">
+                      Parler à un expert <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -259,6 +305,33 @@ export default function SecurityPage({ onLinaClick }: SecurityPageProps) {
                     <div className="text-gray-600">Temps de réponse moyen</div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mini FAQ Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Questions fréquentes - Sécurité & RGPD</h2>
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Comment Devit.IA protège les données de ses clients ?</h3>
+                <p className="text-gray-700">Devit.IA applique des NDA stricts, une gestion sécurisée des accès nominatifs, un stockage chiffré (AES-256), et des outils conformes RGPD (Microsoft 365, Google Workspace). Surveillance continue et audits réguliers garantissent la confidentialité.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Le RGPD s'applique-t-il aux entreprises marocaines qui travaillent avec l'Europe ?</h3>
+                <p className="text-gray-700">Oui, toute entreprise marocaine qui traite des données de citoyens européens doit respecter le RGPD. Devit.IA aligne ses process sur ces exigences : finalité limitée, conservation maîtrisée, confidentialité renforcée et droit d'accès.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Qui est responsable des accès et des mots de passe ?</h3>
+                <p className="text-gray-700">Le client reste maître de ses environnements, mots de passe et politiques de sécurité. Devit.IA utilise des comptes nominatifs avec authentification sécurisée et révocation immédiate des accès en fin de mission.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Quelles sont les mesures de sécurité internes mises en place par Devit.IA ?</h3>
+                <p className="text-gray-700">Gestion IAM centralisée (Azure AD, Okta), coffres-forts pour secrets (Vault, Key Vault), pipelines sécurisés (Snyk, SonarQube), surveillance 24/7 (Datadog, CrowdStrike), audits réguliers (Nessus, Vanta) et chiffrement AES-256/TLS 1.3.</p>
               </div>
             </div>
           </div>
