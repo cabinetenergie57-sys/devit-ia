@@ -38,7 +38,7 @@ export default function Header({ onLinaClick }: HeaderProps) {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center cursor-pointer">
+          <Link to="/" className="flex items-center cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
             <div className="text-3xl font-bold gradient-text">Devit.IA</div>
           </Link>
 
