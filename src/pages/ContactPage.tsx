@@ -46,7 +46,7 @@ export default function ContactPage({ onLinaClick }: ContactPageProps) {
     {
       icon: Mail,
       title: 'Email',
-      details: ['contact@devitia.com', 'lina@devitia.com'],
+      details: ['contact@devitia.com'],
     },
     {
       icon: MapPin,
