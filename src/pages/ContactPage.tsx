@@ -46,7 +46,7 @@ export default function ContactPage({ onLinaClick }: ContactPageProps) {
     {
       icon: Mail,
       title: 'Email',
-      details: ['contact@devitia.ma', 'lina@devitia.ma'],
+      details: ['contact@devitia.com', 'lina@devitia.com'],
     },
     {
       icon: MapPin,
@@ -109,7 +109,7 @@ export default function ContactPage({ onLinaClick }: ContactPageProps) {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">Réponse express</h2>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Contactez-nous par téléphone (+33 7 63 26 26 09), email (contact@devitia.ma) ou formulaire. Discutez avec Lina 24/7 pour des réponses immédiates. Démarrage possible en moins de 15 jours avec DevConnect™. Devis gratuit et personnalisé.
+                    Contactez-nous par téléphone (+33 7 63 26 26 09), email (contact@devitia.com) ou formulaire. Discutez avec Lina 24/7 pour des réponses immédiates. Démarrage possible en moins de 15 jours avec DevConnect™. Devis gratuit et personnalisé.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     <Link to="/methode" className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-1">

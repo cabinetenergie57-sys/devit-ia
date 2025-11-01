@@ -63,7 +63,7 @@ export default function LinaChat({ isOpen, onClose, isMinimized, onMinimize }: L
       return data.message;
     } catch (error) {
       console.error('Error calling Lina API:', error);
-      return 'Je rencontre un problème technique. Pouvez-vous réessayer ou nous contacter directement à contact@devitia.ma ?';
+      return 'Je rencontre un problème technique. Pouvez-vous réessayer ou nous contacter directement à contact@devitia.com ?';
     }
   };
 
@@ -95,7 +95,7 @@ export default function LinaChat({ isOpen, onClose, isMinimized, onMinimize }: L
       console.error('Error getting response:', error);
       const errorMessage: Message = {
         role: 'assistant',
-        content: 'Je rencontre un problème technique. Pouvez-vous réessayer ou nous contacter directement à contact@devitia.ma ?',
+        content: 'Je rencontre un problème technique. Pouvez-vous réessayer ou nous contacter directement à contact@devitia.com ?',
         timestamp: new Date().toISOString(),
       };
       setMessages((prev) => [...prev, errorMessage]);

@@ -131,10 +131,10 @@ export default function Footer({ onLinaClick }: FooterProps) {
               <li className="flex items-start space-x-2">
                 <Mail size={18} className="flex-shrink-0 mt-1 text-gray-400" />
                 <a
-                  href="mailto:contact@devitia.ma"
+                  href="mailto:contact@devitia.com"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  contact@devitia.ma
+                  contact@devitia.com
                 </a>
               </li>
               <li className="flex items-start space-x-2">

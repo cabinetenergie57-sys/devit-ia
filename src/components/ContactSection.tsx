@@ -69,7 +69,7 @@ export default function ContactSection({ onLinaClick }: ContactSectionProps) {
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@devitia.ma',
+      content: 'contact@devitia.com',
     },
     {
       icon: Phone,

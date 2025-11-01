@@ -17,7 +17,7 @@ export const organizationSchema = {
     "@type": "ContactPoint",
     "telephone": "+33-7-63-26-26-09",
     "contactType": "Sales",
-    "email": "contact@devitia.ma",
+    "email": "contact@devitia.com",
     "availableLanguage": ["French"],
     "areaServed": ["FR", "BE", "CH", "CA", "MA"]
   },
