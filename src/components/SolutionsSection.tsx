@@ -1,4 +1,4 @@
-import { Users, UserCheck, Briefcase, ArrowRight, CheckCircle, Zap, Users as UsersIcon, Repeat2 } from 'lucide-react';
+import { Users, UserCheck, Briefcase, ArrowRight, CheckCircle, Zap, Repeat2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface SolutionsSectionProps {
@@ -49,7 +49,6 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
       features: [
         'Pré-qualification complète : Tests techniques, entretien en français, soft-skills et adéquation au contexte PME',
         'Onboarding < 15 jours : Immersion rapide dans vos outils (Jira, GitLab, Slack, M365…) et vos rituels',
-        'Mini-management inclus : Manager Devit.IA dédié, points réguliers, KPI partagés, plans d\'amélioration',
         'Remplacement garanti : En cas d\'inadéquation, remplacement accéléré pour assurer la continuité',
       ],
       cta: 'Obtenir 3 profils qualifiés',
@@ -127,7 +126,7 @@ export default function SolutionsSection({ onLinaClick }: SolutionsSectionProps)
 
                     <div className="space-y-6 mb-8">
                       {solution.features.map((feature, idx) => {
-                        const icons = [CheckCircle, Zap, UsersIcon, Repeat2];
+                        const icons = [CheckCircle, Zap, Repeat2];
                         const FeatureIcon = icons[idx] || CheckCircle;
                         return (
                           <div key={idx} className="flex items-start space-x-4">
