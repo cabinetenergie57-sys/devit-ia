@@ -41,6 +41,13 @@ const marketData: MarketData[] = [
     equivalent20: '10 500 €',
     equivalent21: '11 025 €',
     remarks: '≈ 750 CAD/j'
+  },
+  {
+    country: 'Maroc (Devit.IA)',
+    tjm: 250,
+    equivalent20: '5 000 €',
+    equivalent21: '5 250 €',
+    remarks: '≈ -50 %'
   }
 ];
 
