@@ -172,7 +172,10 @@ export default function Footer({ onLinaClick }: FooterProps) {
 
           <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
             <div className="mb-4 md:mb-0">
-              &copy; 2025 Devit.IA. Tous droits réservés.
+              <div>&copy; 2025 Devit.IA. Tous droits réservés.</div>
+              <div className="text-sm mt-3" style={{ fontSize: '0.9rem', opacity: 0.85 }}>
+                Devit.IA fait partie de Pulse IA Group – écosystème dédié à la formation et à l'externalisation intelligente.
+              </div>
             </div>
             <div className="flex space-x-6">
               <Link to="/contact" className="hover:text-white transition-colors">

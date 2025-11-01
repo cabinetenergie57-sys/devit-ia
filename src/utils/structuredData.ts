@@ -1,11 +1,18 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://devit-ia.com/#org",
   "name": "Devit.IA",
-  "alternateName": "DevConnect",
+  "alternateName": ["DevConnect", "Devit IA"],
+  "brand": "Devit.IA",
   "url": "https://devit-ia.com",
   "logo": "https://devit-ia.com/logo.png",
+  "slogan": "Externalisation IT francophone agile – Méthode DevConnect™",
   "description": "Externalisation IT et Data pour entreprises francophones. Méthode DevConnect exclusive, nearshore Maroc, développeurs et data analysts certifiés.",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Pulse IA Group"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "58 rue Monceau",
@@ -13,14 +20,26 @@ export const organizationSchema = {
     "postalCode": "75008",
     "addressCountry": "FR"
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+33-7-63-26-26-09",
-    "contactType": "Sales",
-    "email": "contact@devitia.com",
-    "availableLanguage": ["French"],
-    "areaServed": ["FR", "BE", "CH", "CA", "MA"]
-  },
+  "areaServed": ["FR", "BE", "CH", "CA", "MA"],
+  "availableLanguage": ["fr"],
+  "knowsAbout": [
+    "externalisation IT francophone",
+    "nearshore Maroc",
+    "développeurs full-stack",
+    "data & IA",
+    "onboarding développeur",
+    "méthode DevConnect"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33-7-63-26-26-09",
+      "contactType": "customer service",
+      "email": "contact@devitia.com",
+      "availableLanguage": ["fr"],
+      "areaServed": ["FR", "BE", "CH", "CA", "MA"]
+    }
+  ],
   "sameAs": [
     "https://linkedin.com/company/devit-ia"
   ]
